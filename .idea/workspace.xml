@@ -116,8 +116,8 @@
         <counts>
           <entry key="MF" value="1" />
           <entry key="class" value="8" />
-          <entry key="css" value="26" />
-          <entry key="fxml" value="93" />
+          <entry key="css" value="27" />
+          <entry key="fxml" value="94" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="1" />
           <entry key="java" value="52" />
@@ -130,20 +130,20 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="CSS" value="27" />
+          <entry key="CSS" value="28" />
           <entry key="Font" value="3" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="52" />
           <entry key="Manifest" value="1" />
           <entry key="Properties" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="94" />
+          <entry key="XML" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="7" />
-          <entry key="css" value="2160" />
+          <entry key="css" value="2231" />
           <entry key="dummy" value="28" />
           <entry key="fxml" value="368" />
           <entry key="java" value="9497" />
@@ -152,10 +152,15 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="CSS" value="2160" />
+          <entry key="CSS" value="2231" />
           <entry key="JAVA" value="9497" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="368" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -165,18 +170,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -195,11 +188,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="544">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
@@ -301,7 +303,33 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Alterland_Launcher" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="alfa" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="GroovyConsoleState">
     <option name="list">
@@ -361,6 +389,7 @@
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css" />
       </list>
     </option>
   </component>
@@ -456,6 +485,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="alterland" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="popups" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alterland" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -465,6 +503,15 @@
               <item name="alterland" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alterland" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="popups" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
@@ -520,7 +567,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544387245723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544389164357" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -528,7 +575,7 @@
     <property name="project.structure.side.proportion" value="0.22758621" />
     <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -652,7 +699,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16204691" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16204691" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -732,13 +779,16 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/Alterland_Launcher" />
+    </ignored-roots>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainServers.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/github/typhon0/AnimateFX/1.2.0/AnimateFX-1.2.0.jar!/animatefx/animation/FadeOutLeft.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -961,13 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -975,14 +1018,6 @@
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="21" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1023,10 +1058,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="544">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />

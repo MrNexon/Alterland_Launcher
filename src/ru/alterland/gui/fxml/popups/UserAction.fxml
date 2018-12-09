@@ -2,6 +2,7 @@
 
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -10,11 +11,17 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane minHeight="500.0" minWidth="900.0" stylesheets="@../../styles/fragments/toolbar.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="popup_container" minHeight="500.0" minWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="popup-background" />
       <VBox alignment="BOTTOM_CENTER">
          <children>
-            <FlowPane alignment="CENTER_RIGHT" prefHeight="80.0">
+            <FlowPane alignment="BOTTOM_RIGHT">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+               </children>
+            </FlowPane>
+            <FlowPane fx:id="nickname_container" alignment="CENTER_RIGHT" prefHeight="80.0" styleClass="toolbar-container" stylesheets="@../../styles/fragments/toolbar.css">
                 <HBox alignment="CENTER_RIGHT" minHeight="35.0" minWidth="100.0" stylesheets="@../../styles/fragments/nickname.css">
                     <Label fx:id="nickname_label" text="XONIIS">
                         <styleClass>
@@ -35,4 +42,8 @@
          </children>
       </VBox>
    </children>
+   <stylesheets>
+      <URL value="@../../styles/fragments/toolbar.css" />
+      <URL value="@../../styles/popups/UserAction.css" />
+   </stylesheets>
 </StackPane>
