@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="main_container" prefHeight="600.0" prefWidth="1000.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.alterland.controllers.MainWrapper">
+    <children>
+        <BorderPane fx:id="layout_wrapper" minWidth="-Infinity">
+            <top>
+                <StackPane fx:id="header_wrapper" prefHeight="60.0" styleClass="header-wrapper" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+            <StackPane BorderPane.alignment="CENTER">
+               <children>
+                      <StackPane fx:id="wrapper_first" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
+                  <StackPane fx:id="wrapper_second" disable="true" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
+               </children>
+            </StackPane>
+            </center>
+            <bottom>
+                <StackPane fx:id="toolbar_wrapper" prefHeight="80.0" translateY="100.0" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+      <Pane fx:id="alert_pane" disable="true" opacity="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Pane>
+    </children>
+   <stylesheets>
+      <URL value="@../styles/layout.css" />
+      <URL value="@../styles/colors.css" />
+   </stylesheets>
+</StackPane>

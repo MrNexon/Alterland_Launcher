@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="login_wrapper" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../styles/pages/auth.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="2.0" prefWidth="2.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+      <StackPane fx:id="left_pane" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="image_shape" depthTest="DISABLE" pickOnBounds="true" translateX="-5.0" translateY="-5.0">
+               <image>
+                  <Image url="@../../images/earth.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <StackPane fx:id="separator_pane" prefHeight="150.0" prefWidth="200.0" styleClass="accent-color" GridPane.columnIndex="1" />
+      <StackPane fx:id="right_pane" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
+         <children>
+            <VBox fx:id="login_box" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="login_header" text="Вход">
+                     <styleClass>
+                        <String fx:value="login-label" />
+                        <String fx:value="text-color" />
+                     </styleClass>
+                  </Label>
+                  <VBox fx:id="textField_box" styleClass="input-blocks">
+                     <children>
+                        <JFXTextField fx:id="login_textField" labelFloat="true" promptText="Логин">
+                           <styleClass>
+                              <String fx:value="text-fields" />
+                              <String fx:value="primary-color-elements" />
+                              <String fx:value="text-color" />
+                              <String fx:value="inputs" />
+                              <String fx:value="divider-prompt-text-color" />
+                              <String fx:value="accent-color-fields" />
+                           </styleClass>
+                           <VBox.margin>
+                              <Insets bottom="11.0" left="5.0" right="5.0" top="11.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="pass_passField" labelFloat="true" promptText="Пароль">
+                           <styleClass>
+                              <String fx:value="text-fields" />
+                              <String fx:value="primary-color-elements" />
+                              <String fx:value="text-color" />
+                              <String fx:value="inputs" />
+                              <String fx:value="divider-prompt-text-color" />
+                              <String fx:value="accent-color-fields" />
+                           </styleClass>
+                           <VBox.margin>
+                              <Insets bottom="11.0" left="5.0" right="5.0" top="11.0" />
+                           </VBox.margin>
+                        </JFXPasswordField>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="checkBox_box" styleClass="input-blocks">
+                     <children>
+                        <JFXCheckBox fx:id="autoLogin_checkBox" mnemonicParsing="false" text="Автоматический вход">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="check-boxs" />
+                              <String fx:value="text-color" />
+                              <String fx:value="primary-color-elements" />
+                              <String fx:value="inputs" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="savePass_checkBox" layoutX="95.0" layoutY="35.0" mnemonicParsing="false" text="Запомнить пароль">
+                           <styleClass>
+                              <String fx:value="check-boxs" />
+                              <String fx:value="text-color" />
+                              <String fx:value="primary-color-elements" />
+                              <String fx:value="inputs" />
+                           </styleClass>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="buttons_Box" alignment="CENTER_RIGHT" styleClass="input-blocks">
+                     <children>
+                        <JFXButton fx:id="signup_button" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" text="РЕГИСТРАЦИЯ" textFill="#008eff">
+                           <styleClass>
+                              <String fx:value="primary-text-color" />
+                              <String fx:value="inputs" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="signin_button" defaultButton="true" mnemonicParsing="false" onMouseClicked="#onMouseClicked" text="ВОЙТИ" textFill="#008eff">
+                           <styleClass>
+                              <String fx:value="primary-color" />
+                              <String fx:value="text-color" />
+                              <String fx:value="inputs" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                           <padding>
+                              <Insets bottom="7.0" left="18.0" right="18.0" top="7.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+</GridPane>

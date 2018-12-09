@@ -1,0 +1,22 @@
+@import url('../font-faces.css');
+
+Label{
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-smoothing-type: gray; 
+    -fx-font-size: 21px;
+}
+
+.toolbar{
+    -fx-background-color: black;
+    -fx-opacity: 0.5;
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.toolbar-container{
+	-fx-padding: 0px 40px;
+}
+
+
+.toolbar-label{
+    -fx-padding: 5px 17px;
+}

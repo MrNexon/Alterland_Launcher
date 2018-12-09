@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane minHeight="500.0" minWidth="900.0" stylesheets="@../../styles/fragments/toolbar.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="BOTTOM_CENTER">
+         <children>
+            <FlowPane alignment="CENTER_RIGHT" prefHeight="80.0">
+                <HBox alignment="CENTER_RIGHT" minHeight="35.0" minWidth="100.0" stylesheets="@../../styles/fragments/nickname.css">
+                    <Label fx:id="nickname_label" text="XONIIS">
+                        <styleClass>
+                            <String fx:value="text-color" />
+                            <String fx:value="username-label" />
+                        </styleClass>
+                        <padding>
+                            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+                        </padding>
+                    </Label>
+                    <MaterialDesignIconView fx:id="more_button" glyphName="CHEVRON_UP" onMouseClicked="#show_more" onMouseEntered="#button_entered" onMouseExited="#button_exited" opacity="0.6" size="32" styleClass="icon-color" textOrigin="CENTER" translateY="1.0">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </MaterialDesignIconView>
+                </HBox>
+            </FlowPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

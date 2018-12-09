@@ -1,0 +1,21 @@
+@import url('font-faces.css');
+
+Label{
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-smoothing-type: gray; 
+}
+
+.background{
+    -fx-background-color: linear-gradient(to right bottom, #1E1E1E, #272727);
+    -fx-border-width: 1px;
+    -fx-border-color: #616161;
+    -fx-border-style: solid;
+}
+
+.header-wrapper {
+    -fx-padding: 30px 40px 0px 40px;
+}
+
+.wrapper{
+    -fx-padding: 20px 40px;
+}

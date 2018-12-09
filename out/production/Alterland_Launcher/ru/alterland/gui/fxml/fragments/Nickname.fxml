@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER_RIGHT" minHeight="35.0" minWidth="100.0" stylesheets="@../../styles/fragments/nickname.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="nickname_label" text="XONIIS">
+        <styleClass>
+            <String fx:value="text-color" />
+            <String fx:value="username-label" />
+        </styleClass>
+        <padding>
+            <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+        </padding>
+    </Label>
+    <MaterialDesignIconView fx:id="more_button" glyphName="CHEVRON_UP" onMouseClicked="#show_more" onMouseEntered="#button_entered" onMouseExited="#button_exited" opacity="0.6" size="32" styleClass="icon-color" textOrigin="CENTER" translateY="1.0">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </MaterialDesignIconView>
+</HBox>

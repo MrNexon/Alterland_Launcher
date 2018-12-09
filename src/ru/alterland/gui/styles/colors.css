@@ -1,0 +1,49 @@
+.accent-color{
+    -fx-background-color: #FFC107 !important;
+}
+
+.accent-color-elements{
+    -jfx-focus-color: #FFC107 !important;
+    -jfx-checked-color: #FFC107 !important;
+}
+
+.accent-color-fields{
+    -fx-accent: #448aff;
+}
+
+.primary-color{
+    -fx-background-color: #448aff !important;
+}
+
+.primary-text-color{
+    -fx-text-fill: #448aff !important;
+}
+
+.primary-color-elements{
+     -jfx-focus-color: #448aff !important;
+     -jfx-checked-color: #448aff !important;
+ }
+
+.light-primary-color{
+    -fx-background-color: #C5CAE9 !important;
+}
+
+.dark-primary-color{
+    -fx-background-color: #303F9F !important;
+}
+
+.text-color{
+    -fx-text-fill: #FFF;
+}
+
+.icon-color{
+    -fx-fill: #FFF;
+}
+
+.divider-color{
+    -fx-background-color: #BDBDBD !important;
+}
+
+.divider-prompt-text-color{
+    -fx-prompt-text-fill: #BDBDBD !important;
+}

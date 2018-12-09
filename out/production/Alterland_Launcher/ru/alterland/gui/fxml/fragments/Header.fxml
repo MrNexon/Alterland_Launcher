@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="header_wrapper" prefHeight="60" stylesheets="@../../styles/fragments/header.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <Label fx:id="brand_text" alignment="TOP_LEFT" text="AL">
+        <styleClass>
+            <String fx:value="text-brand" />
+            <String fx:value="text-color" />
+        </styleClass>
+    </Label>
+   <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+      <children>
+          <MaterialDesignIconView fx:id="minimize_icon" glyphName="MINUS" onMouseClicked="#minimize_application" onMouseEntered="#navigate_button_entered" onMouseExited="#navigate_button_exited" opacity="0.0" size="33" styleClass="icon-color" textOrigin="CENTER">
+              <cursor>
+                  <Cursor fx:constant="HAND" />
+              </cursor>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+          </MaterialDesignIconView>
+         <MaterialDesignIconView fx:id="close_icon" glyphName="CLOSE" onMouseClicked="#close_application" onMouseEntered="#navigate_button_entered" onMouseExited="#navigate_button_exited" opacity="0.6" size="33" styleClass="icon-color" textOrigin="CENTER">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </MaterialDesignIconView>
+      </children>
+   </HBox>
+</GridPane>
