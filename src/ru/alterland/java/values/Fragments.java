@@ -6,6 +6,8 @@ import ru.alterland.controllers.fragments.Header;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.fragments.Nickname;
 import ru.alterland.controllers.fragments.ToolBar;
+import ru.alterland.controllers.popups.UserAction;
+
 import java.io.IOException;
 
 public class Fragments {
@@ -35,7 +37,14 @@ public class Fragments {
 
     public Node loadToolBarNickname(String nickname) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../gui/fxml/fragments/Nickname.fxml"));
-        nicknameController = new Nickname(mainWrapper, nickname, false);
+        nicknameController = new Nickname(mainWrapper, nickname);
+        fxmlLoader.setController(nicknameController);
+        return fxmlLoader.load();
+    }
+
+    public Node loadToolBarNickname(UserAction userAction, String nickname) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../gui/fxml/fragments/Nickname.fxml"));
+        nicknameController = new Nickname(mainWrapper, userAction, nickname);
         fxmlLoader.setController(nicknameController);
         return fxmlLoader.load();
     }

@@ -12,21 +12,32 @@ public class Pages {
 
     private MainWrapper mainWrapper;
 
+    private MainServers mainServersController;
+    private Auth authController;
+
     public Pages(MainWrapper mainWrapper) {
         this.mainWrapper = mainWrapper;
     }
 
     public Node loadAuth() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../gui/fxml/pages/Auth.fxml"));
-        Auth auth = new Auth(mainWrapper);
-        fxmlLoader.setController(auth);
+        authController = new Auth(mainWrapper);
+        fxmlLoader.setController(authController);
         return fxmlLoader.load();
     }
 
     public Node loadMainServers() throws  IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../gui/fxml/pages/MainServers.fxml"));
-        MainServers mainServers = new MainServers(mainWrapper);
-        fxmlLoader.setController(mainServers);
+        mainServersController = new MainServers(mainWrapper);
+        fxmlLoader.setController(mainServersController);
         return fxmlLoader.load();
+    }
+
+    public Auth getAuthController() {
+        return authController;
+    }
+
+    public MainServers getMainServersController() {
+        return mainServersController;
     }
 }

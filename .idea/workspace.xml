@@ -6,7 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ru/alterland/java/values/Popups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/MainWrapper.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/MainWrapper.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/fragments/Nickname.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/fragments/Nickname.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/values/Fragments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/values/Fragments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,7 +32,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Alterland_Launcher$Main.ic" NAME="Main Coverage Results" MODIFIED="1544042734400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Alterland_Launcher$Main.ic" NAME="Main Coverage Results" MODIFIED="1544551157061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sample.*</FILTER>
     </SUITE>
   </component>
@@ -66,9 +81,10 @@
     <session id="-1166675395">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.104" value="1" />
           <entry key="project.open.time.105" value="1" />
+          <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.107" value="1" />
           <entry key="project.open.time.108" value="1" />
           <entry key="project.open.time.111" value="1" />
@@ -76,6 +92,7 @@
           <entry key="project.open.time.122" value="1" />
           <entry key="project.open.time.128" value="1" />
           <entry key="project.open.time.129" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.137" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
@@ -96,31 +113,33 @@
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.74" value="1" />
-          <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.75" value="2" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.78" value="3" />
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.82" value="1" />
+          <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.89" value="2" />
           <entry key="project.open.time.91" value="1" />
+          <entry key="project.open.time.92" value="1" />
           <entry key="project.open.time.94" value="1" />
           <entry key="project.open.time.95" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="47" />
+          <entry key="project.opened" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MF" value="1" />
           <entry key="class" value="8" />
-          <entry key="css" value="27" />
-          <entry key="fxml" value="94" />
+          <entry key="css" value="31" />
+          <entry key="fxml" value="105" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="52" />
+          <entry key="java" value="76" />
           <entry key="layout" value="1" />
           <entry key="properties" value="1" />
           <entry key="ttf" value="3" />
@@ -130,32 +149,32 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="CSS" value="28" />
+          <entry key="CSS" value="32" />
           <entry key="Font" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="52" />
+          <entry key="JAVA" value="76" />
           <entry key="Manifest" value="1" />
           <entry key="Properties" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="95" />
+          <entry key="XML" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="7" />
-          <entry key="css" value="2231" />
+          <entry key="css" value="2493" />
           <entry key="dummy" value="28" />
-          <entry key="fxml" value="368" />
-          <entry key="java" value="9497" />
+          <entry key="fxml" value="379" />
+          <entry key="java" value="11325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="CSS" value="2231" />
-          <entry key="JAVA" value="9497" />
+          <entry key="CSS" value="2493" />
+          <entry key="JAVA" value="11325" />
           <entry key="PLAIN_TEXT" value="28" />
-          <entry key="XML" value="368" />
+          <entry key="XML" value="379" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -169,83 +188,12 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="24" selection-end-column="7" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="76" column="21" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="21" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1618#1619#0" expanded="true" />
-                <element signature="e#1667#1668#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="358">
+              <caret line="51" column="86" lean-forward="true" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -253,8 +201,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Fragments.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="466">
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -263,13 +223,63 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state>
+              <caret column="32" selection-start-column="32" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Popups.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="101" column="60" selection-start-line="101" selection-start-column="60" selection-end-line="101" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -280,8 +290,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -303,6 +313,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <favorite-branches>
       <branch-storage>
@@ -365,31 +376,32 @@
         <option value="$PROJECT_DIR$/src/ru/alterland/java/values/PagesControllers.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/Auth.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/Auth.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/MainServers.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainServers.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/main/Main.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/Header.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/ToolBar.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/ToolBar.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/Header.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/Auth.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/nickname.css" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Fragments.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/PopupWrapper.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/PopapWrapper.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Popups.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Fragments.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" />
       </list>
     </option>
   </component>
@@ -408,8 +420,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -439,6 +451,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="alterland" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alterland" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
@@ -486,6 +506,24 @@
               <item name="alterland" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alterland" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alterland" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
               <item name="popups" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -503,6 +541,15 @@
               <item name="alterland" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="alterland" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
@@ -567,15 +614,15 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544389164357" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544559314132" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22758621" />
     <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -699,7 +746,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16204691" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -708,7 +755,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27874187" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27874187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -736,7 +783,7 @@
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="11" side_tool="true" weight="0.32995737" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15884861" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17004265" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -789,13 +836,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/github/typhon0/AnimateFX/1.2.0/AnimateFX-1.2.0.jar!/animatefx/animation/FadeOutLeft.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/animation/Timeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1510">
@@ -856,13 +896,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/ToolBar.java" />
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/footer.css" />
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -913,34 +946,12 @@
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/PagesEventsListeners.java" />
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/PagesControllers.java" />
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/MainServers.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="234" selection-start-line="8" selection-start-column="234" selection-end-line="8" selection-end-column="234" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml">
-      <provider editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -949,33 +960,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Header.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="28" column="179" selection-start-line="28" selection-start-column="179" selection-end-line="28" selection-end-column="179" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/Auth.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -987,37 +976,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/PopupWrapper.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1038,10 +1002,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Header.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="28" column="179" selection-start-line="28" selection-start-column="179" selection-end-line="28" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="51" column="86" lean-forward="true" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Fragments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="466">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="101" column="60" selection-start-line="101" selection-start-column="60" selection-end-line="101" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Popups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1050,43 +1143,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="358">
+          <caret line="78" column="27" selection-start-line="78" selection-start-column="27" selection-end-line="78" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="21" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/UserAction.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

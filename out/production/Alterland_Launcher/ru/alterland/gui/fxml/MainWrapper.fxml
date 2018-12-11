@@ -24,11 +24,8 @@
                 <StackPane fx:id="toolbar_wrapper" prefHeight="80.0" translateY="100.0" BorderPane.alignment="CENTER" />
             </bottom>
         </BorderPane>
-      <Pane fx:id="alert_pane" disable="true" opacity="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
-         <effect>
-            <GaussianBlur />
-         </effect>
-      </Pane>
+      <StackPane fx:id="popup_container" disable="true" opacity="0">
+      </StackPane>
     </children>
    <stylesheets>
       <URL value="@../styles/layout.css" />

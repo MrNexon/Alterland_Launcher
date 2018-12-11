@@ -28,7 +28,7 @@ public class MainWrapper implements Initializable {
     private BorderPane layout_wrapper;
 
     @FXML
-    private Pane alert_pane;
+    public Pane popup_container;
 
     @FXML
     private StackPane header_wrapper;
@@ -87,14 +87,21 @@ public class MainWrapper implements Initializable {
     public void blurScene() {
         GaussianBlur gaussianBlur = new GaussianBlur(0);
         layout_wrapper.setEffect(gaussianBlur);
-        FadeTransition fadeTransition = new FadeTransition(Duration.millis(150), alert_pane);
-        fadeTransition.setToValue(0.5);
         Timeline timeline = new Timeline();
         KeyValue keyValue = new KeyValue(gaussianBlur.radiusProperty(), 10);
-        KeyFrame keyFrame = new KeyFrame(Duration.millis(150), keyValue);
+        KeyFrame keyFrame = new KeyFrame(Duration.millis(120), keyValue);
         timeline.getKeyFrames().add(keyFrame);
-        alert_pane.setDisable(false);
-        fadeTransition.play();
         timeline.play();
     }
+
+    public void unBlurScene(){
+        GaussianBlur gaussianBlur = new GaussianBlur(10);
+        layout_wrapper.setEffect(gaussianBlur);
+        Timeline timeline = new Timeline();
+        KeyValue keyValue = new KeyValue(gaussianBlur.radiusProperty(), 0);
+        KeyFrame keyFrame = new KeyFrame(Duration.millis(120), keyValue);
+        timeline.getKeyFrames().add(keyFrame);
+        timeline.play();
+    }
+
 }
