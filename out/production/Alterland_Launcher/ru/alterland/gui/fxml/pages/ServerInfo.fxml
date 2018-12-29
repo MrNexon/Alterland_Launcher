@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="serverInfo_wrapper" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../styles/pages/serverInfo.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <StackPane fx:id="cover_wrapper">
+         <children>
+            <ImageView fx:id="server_cover" fitHeight="380.0" fitWidth="250.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/classic.png" />
+               </image>
+            </ImageView>
+         </children></StackPane>
+      <FlowPane alignment="CENTER" GridPane.columnIndex="1">
+         <children>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="title" style="-fx-font-size: 35px;" styleClass="text-color" text="Название сервера">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="description" layoutX="10.0" layoutY="10.0" maxWidth="300.0" text="Текст" wrapText="true">
+                     <styleClass>
+                        <String fx:value="text-color" />
+                        <String fx:value="text-desc" />
+                     </styleClass></Label>
+                   <HBox fx:id="buttons_Box" alignment="CENTER_LEFT" styleClass="input-blocks">
+                       <children>
+                           <JFXButton fx:id="play_button" defaultButton="true" mnemonicParsing="false" onMouseClicked="#play" text="ИГРАТЬ" textFill="#008eff">
+                               <styleClass>
+                                   <String fx:value="primary-color" />
+                                   <String fx:value="text-color" />
+                                   <String fx:value="inputs" />
+                                   <String fx:value="buttons" />
+                               </styleClass>
+                               <padding>
+                                   <Insets bottom="7.0" left="18.0" right="18.0" top="7.0" />
+                               </padding>
+                               <cursor>
+                                   <Cursor fx:constant="HAND" />
+                               </cursor>
+                           </JFXButton>
+                           <JFXButton fx:id="back_button" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#back" text="Назад" textFill="#008eff">
+                               <styleClass>
+                                   <String fx:value="primary-text-color" />
+                                   <String fx:value="inputs" />
+                                   <String fx:value="buttons" />
+                               </styleClass>
+                               <cursor>
+                                   <Cursor fx:constant="HAND" />
+                               </cursor>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           </JFXButton>
+                       </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                   </HBox>
+               </children>
+            </VBox>
+         </children>
+      </FlowPane>
+   </children>
+</GridPane>

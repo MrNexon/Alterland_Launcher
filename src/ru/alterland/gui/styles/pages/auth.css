@@ -1,3 +1,10 @@
+@import url('../font-faces.css');
+
+Label{
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-smoothing-type: gray;
+}
+
 .login-label{
     -fx-font-size: 40px;
     -fx-font-weight: 700;
@@ -25,3 +32,6 @@
     -fx-font-size: 16px;
 }
 
+.error-label{
+    -fx-font-size: 15px;
+}

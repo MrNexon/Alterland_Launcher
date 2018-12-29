@@ -1,0 +1,11 @@
+@import url('../font-faces.css');
+
+Label{
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-smoothing-type: gray;
+}
+
+.panes {
+    -fx-background-image: url("../../images/classic.png");
+    -fx-background-size: 100%;
+}

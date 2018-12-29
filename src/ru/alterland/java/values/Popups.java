@@ -6,9 +6,11 @@ import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.popups.UserAction;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class Popups {
     private MainWrapper mainWrapper;
+    private static Logger log = Logger.getLogger(Popups.class.getName());
 
     private UserAction userActionController;
 
@@ -17,7 +19,8 @@ public class Popups {
     }
 
     public Node loadUserAction(String nickname, String uuid) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../gui/fxml/popups/UserAction.fxml"));
+        log.info("Load user actions popup");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ru/alterland/gui/fxml/popups/UserAction.fxml"));
         userActionController = new UserAction(mainWrapper, nickname, uuid);
         fxmlLoader.setController(userActionController);
         return fxmlLoader.load();

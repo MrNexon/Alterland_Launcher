@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
-<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
@@ -15,8 +17,8 @@
             <center>
             <StackPane BorderPane.alignment="CENTER">
                <children>
-                      <StackPane fx:id="wrapper_first" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
-                  <StackPane fx:id="wrapper_second" disable="true" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
+                   <StackPane fx:id="wrapper_first" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
+                   <StackPane fx:id="wrapper_second" disable="true" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
                </children>
             </StackPane>
             </center>
@@ -24,8 +26,22 @@
                 <StackPane fx:id="toolbar_wrapper" prefHeight="80.0" translateY="100.0" BorderPane.alignment="CENTER" />
             </bottom>
         </BorderPane>
-      <StackPane fx:id="popup_container" disable="true" opacity="0">
+      <StackPane fx:id="popup_container" disable="true" opacity="0" />
+      <StackPane fx:id="blockAction_pane" disable="true" opacity="0" />
+      <StackPane fx:id="message_pane" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" styleClass="message">
+         <children>
+            <Label fx:id="message_label" text="Загрузка">
+               <styleClass>
+                  <String fx:value="text-color" />
+                  <String fx:value="message-label" />
+               </styleClass></Label>
+         </children>
       </StackPane>
+      <Pane fx:id="drag_pane" prefHeight="30.0">
+         <StackPane.margin>
+            <Insets bottom="570.0" />
+         </StackPane.margin>
+      </Pane>
     </children>
    <stylesheets>
       <URL value="@../styles/layout.css" />

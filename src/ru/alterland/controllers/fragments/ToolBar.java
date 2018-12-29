@@ -1,7 +1,6 @@
 package ru.alterland.controllers.fragments;
 
 
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,8 +18,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class ToolBar implements Initializable {
+
+    private static Logger log = Logger.getLogger(ToolBar.class.getName());
 
     @FXML
     private Label servers, news, shop;
@@ -43,6 +45,7 @@ public class ToolBar implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        log.info("Init");
         menuItems = new ArrayList<>();
         menuItems.add(servers);
         menuItems.add(news);
@@ -76,7 +79,7 @@ public class ToolBar implements Initializable {
         timeline.getKeyFrames().add(keyFrame);
 
         TranslateTransition translateTransition = new TranslateTransition(Duration.millis(150), selector_button);
-        System.out.println("Index: " + menuItems.indexOf(label));
+        log.info("Clicked menu item. Index: " + menuItems.indexOf(label));
         double x = (6 * menuItems.indexOf(label));
         for (int i = menuItems.indexOf(label) - 1; i >= 0; i--){
             x += menuItems.get(i).getWidth();

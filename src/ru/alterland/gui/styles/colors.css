@@ -47,3 +47,7 @@
 .divider-prompt-text-color{
     -fx-prompt-text-fill: #BDBDBD !important;
 }
+
+.text-red-color {
+    -fx-text-fill: #D34335 !important;
+}

@@ -8,7 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 import ru.alterland.controllers.MainWrapper;
-import ru.alterland.main.Main;
+import ru.alterland.Main;
 
 import java.net.URL;
 import java.util.ResourceBundle;

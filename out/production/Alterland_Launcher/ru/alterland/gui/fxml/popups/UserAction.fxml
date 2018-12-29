@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
@@ -17,20 +18,29 @@
                      <children>
                         <VBox fx:id="buttons_list_container">
                            <children>
-                              <StackPane fx:id="my_account" alignment="BOTTOM_RIGHT" styleClass="popup-item">
+                              <StackPane fx:id="my_account" alignment="BOTTOM_RIGHT" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Мой аккаунт" textFill="WHITE" />
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </StackPane>
-                              <StackPane fx:id="settings" alignment="CENTER_RIGHT" styleClass="popup-item">
+                              <StackPane fx:id="settings" alignment="CENTER_RIGHT" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Настройки" textFill="WHITE" />
                                  </children>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
                               </StackPane>
-                              <StackPane fx:id="exit" alignment="TOP_RIGHT" styleClass="popup-item">
+                              <StackPane fx:id="exit" alignment="TOP_RIGHT" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Выход" textFill="WHITE" />
                                  </children>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
                               </StackPane>
                            </children>
                         </VBox>

@@ -19,3 +19,11 @@ Label{
 .wrapper{
     -fx-padding: 20px 40px;
 }
+
+.message{
+    -fx-background-color: rgba(0, 0, 0, .5);
+}
+
+.message-label{
+    -fx-font-size: 40px;
+}

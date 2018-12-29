@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 import ru.alterland.controllers.MainWrapper;
@@ -19,8 +18,11 @@ import ru.alterland.java.values.Popups;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class Nickname implements Initializable {
+    private static Logger log = Logger.getLogger(Nickname.class.getName());
+
     @FXML
     private Label nickname_label;
 
@@ -51,11 +53,13 @@ public class Nickname implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        log.info("Init");
+        log.info("Is fisrt: " + is_first);
         nickname_label.setText(nickname);
         userAction = new Popups(mainWrapper);
         if (is_first){
             try {
-                mainWrapper.popup_container.getChildren().setAll(userAction.loadUserAction(nickname, "0"));
+                mainWrapper.getPopup_container().getChildren().setAll(userAction.loadUserAction(nickname, "0"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -63,6 +67,7 @@ public class Nickname implements Initializable {
     }
 
     public void show_more(MouseEvent mouseEvent) {
+        log.info("Showing more");
         if (is_first) {
             nickname_container.setOpacity(0);
             userAction.getUserActionController().setOriginalNicknameController(this);

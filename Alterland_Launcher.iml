@@ -9,6 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Java Libs" level="project" />
     <orderEntry type="library" name="io.github.typhon0:AnimateFX:1.2.0" level="project" />
-    <orderEntry type="library" name="cc.plural:jsonij:0.3.1" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" name="commons-codec:commons-codec:1.11" level="project" />
   </component>
 </module>
