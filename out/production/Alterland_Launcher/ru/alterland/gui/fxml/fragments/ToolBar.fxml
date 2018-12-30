@@ -46,7 +46,7 @@
                               <Insets left="3.0" right="3.0" />
                            </HBox.margin>
                         </Label>
-                        <Label fx:id="news" onMouseClicked="#menu_item_clicked" onMouseEntered="#button_entered" onMouseExited="#button_exited" opacity="0.6" text="Новости" textFill="WHITE">
+                        <Label fx:id="news" disable="true" onMouseClicked="#menu_item_clicked" onMouseEntered="#button_entered" onMouseExited="#button_exited" opacity="0.6" text="Новости" textFill="WHITE">
                            <styleClass>
                               <String fx:value="text-color" />
                               <String fx:value="toolbar-label" />
@@ -58,7 +58,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Label>
-                        <Label fx:id="shop" onMouseClicked="#menu_item_clicked" onMouseEntered="#button_entered" onMouseExited="#button_exited" opacity="0.6" text="Магазин" textFill="WHITE">
+                        <Label fx:id="shop" disable="true" onMouseClicked="#menu_item_clicked" onMouseEntered="#button_entered" onMouseExited="#button_exited" opacity="0.6" text="Магазин" textFill="WHITE">
                            <styleClass>
                               <String fx:value="text-color" />
                               <String fx:value="toolbar-label" />

@@ -1,14 +1,12 @@
 package ru.alterland.controllers;
 
 import animatefx.animation.*;
-import javafx.animation.FadeTransition;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -64,6 +62,9 @@ public class MainWrapper implements Initializable {
     @FXML
     private Label message_label;
 
+    @FXML
+    private ProgressBar loading_bar;
+
     private Header header_controller;
 
     private String nickname;
@@ -83,6 +84,7 @@ public class MainWrapper implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         log.info("Init");
+        loading_bar.setScaleX(0);
         wrappers = new ArrayList<>();
         screensHistory = new ArrayList<>();
         wrappers.add(wrapper_first);
@@ -270,6 +272,7 @@ public class MainWrapper implements Initializable {
 
     public void showMessage(String message){
         message_label.setText(message);
+        if (message_pane.getOpacity() == 1) return;
         FadeTransition fadeTransition = new FadeTransition(Duration.millis(120), message_pane);
         fadeTransition.setToValue(1);
         message_pane.setDisable(false);
@@ -289,4 +292,15 @@ public class MainWrapper implements Initializable {
         EffectUtilities.makeDraggable(stage, drag_pane);
     }
 
+    public void showProgressBar(){
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), loading_bar);
+        scaleTransition.setToX(1);
+        scaleTransition.play();
+    }
+
+    public void hideProgressBar(){
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), loading_bar);
+        scaleTransition.setToX(0);
+        scaleTransition.play();
+    }
 }

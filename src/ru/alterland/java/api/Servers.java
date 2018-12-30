@@ -8,12 +8,12 @@ import ru.alterland.java.UserData;
 import ru.alterland.java.api.Exceptions.ApiExceptions;
 import ru.alterland.java.api.Service.Connection;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Servers {
+    private static Logger log = Logger.getLogger(Servers.class.getName());
     public static List<Card> getServerList(UserData userData) throws ApiExceptions {
         String response = Connection.getResponse("servers.getServerList", null, userData);
         JsonObject obj = new Gson().fromJson(response, JsonObject.class);
@@ -26,13 +26,9 @@ public class Servers {
         for (int i = 0; i < arr.size(); i++){
             JsonObject server = new Gson().fromJson(arr.get(i), JsonObject.class);
             Card card;
-            try {
-                card = new Card(Connection.server + server.get("cover_src").getAsString(), server.get("server_name").getAsString(), server.get("title").getAsString(), server.get("description").getAsString(), Card.ArticleStatus.Installed, Card.ServerStatus.values()[server.get("status").getAsInt()], InetAddress.getByName(server.get("status").getAsString()));
-                cards.add(card);
-                System.out.println("Load apiServer complete: " + server.get("server_name").getAsString());
-            } catch (UnknownHostException e) {
-                e.printStackTrace();
-            }
+            card = new Card(Connection.server + server.get("cover_src").getAsString(), server.get("server_name").getAsString(), server.get("title").getAsString(), server.get("description").getAsString(), Card.ArticleStatus.values()[server.get("article_status").getAsInt()], Card.ServerStatus.values()[server.get("status").getAsInt()]);
+            cards.add(card);
+            log.info("Load server complete: " + server.get("server_name").getAsString());
         }
         return cards;
     }

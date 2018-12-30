@@ -2,8 +2,6 @@ package ru.alterland.java;
 
 import javafx.scene.image.Image;
 
-import java.net.InetAddress;
-
 public class Card {
     private Image cover;
     private String id;
@@ -11,7 +9,6 @@ public class Card {
     private String description;
     private ArticleStatus articleStatus;
     private ServerStatus serverStatus;
-    private InetAddress serverAddress;
 
     public Image getCover() {
         return cover;
@@ -37,38 +34,33 @@ public class Card {
         return serverStatus;
     }
 
-    public InetAddress getServerAddress() {
-        return serverAddress;
-    }
 
     public void setServerStatus(ServerStatus serverStatus) {
         this.serverStatus = serverStatus;
     }
 
     public enum ArticleStatus {
-        Purchase, Installed, Damaged, Buy, Close
+        Buy, Purchase, Downloading, Installed
     }
 
     public enum ServerStatus {
         Online, Offline, Close, Service, Restart, Unavailable
     }
 
-    public Card(String url, String id, String title, String description, ArticleStatus articleStatus, InetAddress serverAddress) {
-        this.cover = new Image(url, 290, 418, false, true, false);
+    public Card(String url, String id, String title, String description, ArticleStatus articleStatus) {
+        this.cover = new Image(url, 250, 380, false, true, true);
         this.id = id;
         this.title = title;
         this.description = description;
         this.articleStatus = articleStatus;
-        this.serverAddress = serverAddress;
     }
 
-    public Card(String url, String id, String title, String description, ArticleStatus articleStatus, ServerStatus serverStatus, InetAddress serverAddress) {
-        this.cover = new Image(url, 290, 418, false, true, false);
+    public Card(String url, String id, String title, String description, ArticleStatus articleStatus, ServerStatus serverStatus) {
+        this.cover = new Image(url, 250, 380, false, true, false);
         this.id = id;
         this.title = title;
         this.description = description;
         this.articleStatus = articleStatus;
         this.serverStatus = serverStatus;
-        this.serverAddress = serverAddress;
     }
 }

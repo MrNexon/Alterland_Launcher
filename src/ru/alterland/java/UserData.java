@@ -9,7 +9,7 @@ public class UserData {
     private Boolean earlyAccess;
 
     public enum Role {
-        user, admin, moderator, support, systemAdmin
+        admin, moderator, user
     }
 
     public UserData(String nickname, String accessToken, Role role, String lastLoginTime, String uuid, Boolean earlyAccess){

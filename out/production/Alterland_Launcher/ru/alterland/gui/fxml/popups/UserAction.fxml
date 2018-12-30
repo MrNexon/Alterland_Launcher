@@ -18,7 +18,7 @@
                      <children>
                         <VBox fx:id="buttons_list_container">
                            <children>
-                              <StackPane fx:id="my_account" alignment="BOTTOM_RIGHT" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
+                              <StackPane fx:id="my_account" alignment="BOTTOM_RIGHT" disable="true" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Мой аккаунт" textFill="WHITE" />
                                  </children>
@@ -26,7 +26,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </StackPane>
-                              <StackPane fx:id="settings" alignment="CENTER_RIGHT" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
+                              <StackPane fx:id="settings" alignment="CENTER_RIGHT" disable="true" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Настройки" textFill="WHITE" />
                                  </children>
@@ -34,7 +34,7 @@
                                       <Cursor fx:constant="HAND" />
                                   </cursor>
                               </StackPane>
-                              <StackPane fx:id="exit" alignment="TOP_RIGHT" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
+                              <StackPane fx:id="exit" alignment="TOP_RIGHT" disable="true" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Выход" textFill="WHITE" />
                                  </children>

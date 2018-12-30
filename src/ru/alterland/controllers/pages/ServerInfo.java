@@ -50,14 +50,13 @@ public class ServerInfo implements Initializable {
             case Buy:
                 play_button.setText("Купить");
                 break;
-            case Close:
-                play_button.setText("Закрыт");
-                break;
             case Purchase:
                 play_button.setText("Установить");
                 break;
-            case Damaged:
-                play_button.setText("Переустановить");
+            case Downloading:
+                play_button.setDisable(true);
+                play_button.setText("Установка...");
+                break;
         }
     }
 
@@ -69,7 +68,7 @@ public class ServerInfo implements Initializable {
         this.card = card;
     }
     public void play(MouseEvent mouseEvent) {
-        System.out.println("Minecraft start");
+        mainWrapper.showProgressBar();
     }
     public void back(MouseEvent mouseEvent){
         mainWrapper.lastScene(MainWrapper.Direction.Up);

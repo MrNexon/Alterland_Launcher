@@ -8,23 +8,27 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Logger;
 
 public class Connection {
-    public static String apiServer = "http://api.alterland.ru/methods/";
-    public static String server = "http://api.alterland.ru/";
+    public static String apiServer = "http://launcher.alterland.ru/methods/";
+    public static String server = "http://launcher.alterland.ru/";
     private static String ver = "0.1";
 
+    private static Logger log = Logger.getLogger(Connection.class.getName());
+
     public static String getResponse(String method, String query){
-        return sendResponce(method, query, null);
+        return sendResponse(method, query, null);
     }
 
     public static String getResponse(String method, String query, UserData userData){
-        return sendResponce(method, query, userData.getAccessToken());
+        return sendResponse(method, query, userData.getAccessToken());
     }
 
-    private static String sendResponce(String method, String query, String accessToken){
+    private static String sendResponse(String method, String query, String accessToken){
         try {
             URL obj = new URL(apiServer + method + "?" + query + "&accessToken=" + accessToken + "&v=" + ver);
+            log.info("Send response: " + obj.toString());
             HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
             connection.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));

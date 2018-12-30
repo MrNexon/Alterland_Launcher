@@ -27,3 +27,18 @@ Label{
 .message-label{
     -fx-font-size: 40px;
 }
+
+.progress-bar{
+    -fx-background-color: transparent;
+}
+
+.progress-bar .track{
+    -fx-background-color: grey;
+}
+
+.progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-background-radius: 0, 0, 0, 0;
+}

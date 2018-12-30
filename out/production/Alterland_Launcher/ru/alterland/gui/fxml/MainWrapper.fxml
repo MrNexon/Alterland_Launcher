@@ -4,9 +4,11 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
 
 <StackPane fx:id="main_container" prefHeight="600.0" prefWidth="1000.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.alterland.controllers.MainWrapper">
     <children>
@@ -26,6 +28,18 @@
                 <StackPane fx:id="toolbar_wrapper" prefHeight="80.0" translateY="100.0" BorderPane.alignment="CENTER" />
             </bottom>
         </BorderPane>
+      <TilePane alignment="BOTTOM_CENTER" mouseTransparent="true">
+         <children>
+            <ProgressBar fx:id="loading_bar" prefWidth="908.0" progress="0.81" scaleX="0.0">
+               <TilePane.margin>
+                  <Insets bottom="94.0" left="20.0" right="20.0" />
+               </TilePane.margin>
+            </ProgressBar>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </TilePane>
       <StackPane fx:id="popup_container" disable="true" opacity="0" />
       <StackPane fx:id="blockAction_pane" disable="true" opacity="0" />
       <StackPane fx:id="message_pane" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" styleClass="message">

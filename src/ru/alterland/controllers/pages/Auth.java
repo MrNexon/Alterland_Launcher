@@ -1,11 +1,11 @@
 package ru.alterland.controllers.pages;
 
 import animatefx.animation.FadeIn;
-import animatefx.animation.FadeOut;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -21,6 +21,8 @@ import ru.alterland.java.values.Pages;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -75,27 +77,40 @@ public class Auth implements Initializable {
     public void onMouseClicked(MouseEvent mouseEvent) {
         log.info("Login button clicked");
         if (!login_textField.validate() || !pass_passField.validate()) return;
-        new FadeOut(error_label).setSpeed(2).play();
-        try {
-            mainWrapper.showMessage("Авторизация");
-            UserData userData = ru.alterland.java.api.Auth.loginUser(login_textField.getText(), pass_passField.getText());
-            Main.userData = userData;
-            mainWrapper.showToolbar(userData.getNickname());
-            mainWrapper.nextScene(new Pages(mainWrapper).loadMainServers(), MainWrapper.Direction.Right);
-        } catch (AuthException e) {
-            if (e.getType() == AuthException.Type.UserNotFound) {
-                log.log(Level.WARNING, "User not found");
-                error_label.setText("Неверные имя пользователя или пароль");
-                new FadeIn(error_label).setSpeed(2).play();
+        mainWrapper.showMessage("Авторизация");
+        log.info("Auth manager started");
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.submit(() -> {
+            try {
+                log.info("Submit data");
+                UserData userData = ru.alterland.java.api.Auth.loginUser(login_textField.getText(), pass_passField.getText());
+                Main.userData = userData;
+                Platform.runLater(() -> {
+                    //mainWrapper.showMessage("Загрузка");
+                    mainWrapper.showToolbar(userData.getNickname());
+                    try {
+                        mainWrapper.nextScene(new Pages(mainWrapper).loadMainServers(), MainWrapper.Direction.Right);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } catch (AuthException e) {
+                if (e.getType() == AuthException.Type.UserNotFound) {
+                    log.log(Level.WARNING, "User not found");
+                    Platform.runLater(() -> {
+                        error_label.setText("Неверные имя пользователя или пароль");
+                        new FadeIn(error_label).setSpeed(2).play();
+                    });
+                }
+                if (e.getType() == AuthException.Type.AccessError) {
+                    log.log(Level.WARNING, "Access error");
+                    Platform.runLater(() -> {
+                        error_label.setText("Ошибка доступа");
+                        new FadeIn(error_label).setSpeed(2).play();
+                    });
+                }
             }
-            if (e.getType() == AuthException.Type.AccessError) {
-                log.log(Level.WARNING, "Access error");
-                error_label.setText("Ошибка доступа");
-                new FadeIn(error_label).setSpeed(2).play();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        mainWrapper.hideMessage();
+            mainWrapper.hideMessage();
+        });
     }
 }
