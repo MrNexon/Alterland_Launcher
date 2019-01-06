@@ -13,17 +13,14 @@ import javafx.util.Duration;
 import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.fragments.ServerCard;
-import ru.alterland.java.Card;
-import ru.alterland.java.api.Exceptions.ApiExceptions;
-import ru.alterland.java.api.Servers;
+import ru.alterland.java.ServerData;
+import ru.alterland.java.launcher.ScheduledTasks;
 import ru.alterland.java.values.Fragments;
 import ru.alterland.java.values.Pages;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class MainServers implements Initializable {
@@ -38,35 +35,53 @@ public class MainServers implements Initializable {
     private List<Node> serverCards;
     private List<ServerCard> serverCardsControllers;
 
-    public MainServers(MainWrapper mainWrapper){
+    public MainServers(MainWrapper mainWrapper, List<ServerData> serverData){
         this.mainWrapper = mainWrapper;
+        mainWrapper.getHeader_controller().showMinimizeIcon();
+        renderCardList(serverData);
+        TimerTask timerTask = new ScheduledTasks.UpdateServerList(this);
+        Main.getUpdateServersTimer().schedule(timerTask, 15000, 15000);
+    }
+
+    public MainWrapper getMainWrapper() { return mainWrapper; }
+
+    public List<ServerCard> getServerCards(){
+        return serverCardsControllers;
+    }
+
+    public List<ServerData> getServersData(){
+        List<ServerData> serversData = new ArrayList<>();
+        serverCardsControllers.forEach(serverCard -> serversData.add(serverCard.getServerData()));
+        return serversData;
+    }
+
+    public void renderCardList(List<ServerData> serversData) {
         serverCards = new ArrayList<>();
         serverCardsControllers = new ArrayList<>();
-        mainWrapper.getHeader_controller().showMinimizeIcon();
+        if (servers_hbox != null) { servers_hbox.getChildren().clear(); }
+        serversData.forEach(this::renderServerCard);
+    }
+
+    public void renderServerCard(ServerData serverData) {
         try {
-            List<Card> cards = Servers.getServerList(Main.userData);
-            cards.forEach(card -> {
-                try {
-                    Fragments fragments = new Fragments(this.mainWrapper);
-                    Node node = fragments.loadServerCard(card);
-                    serverCardsControllers.add(fragments.getServerCardController());
-                    node.setOnMouseEntered(this::button_entered);
-                    node.setOnMouseClicked(this::choose_server);
-                    node.setCursor(Cursor.HAND);
-                    servers_hbox.setMargin(node, new Insets(20, 20, 20, 20));
-                    if (serverCards.size() > 0){
-                        node.setOpacity(0.6);
-                        node.setScaleX(0.95);
-                        node.setScaleY(0.95);
-                    }
-                    System.out.println(node);
-                    serverCards.add(node);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
-        } catch (ApiExceptions apiExceptions) {
-            apiExceptions.printStackTrace();
+            Fragments fragments = new Fragments(this.mainWrapper);
+            Node node = fragments.loadServerCard(serverData);
+            serverCardsControllers.add(fragments.getServerCardController());
+            node.setOnMouseEntered(this::button_entered);
+            node.setOnMouseClicked(this::choose_server);
+            node.setCursor(Cursor.HAND);
+            HBox.setMargin(node, new Insets(20, 20, 20, 20));
+            if (serverCards.size() > 0) {
+                node.setOpacity(0.6);
+                node.setScaleX(0.95);
+                node.setScaleY(0.95);
+            }
+            serverCards.add(node);
+            if (servers_hbox != null) {
+                servers_hbox.getChildren().add(node);
+            }
+        } catch (IOException e) {
+            Main.fatalError(mainWrapper, e);
         }
     }
 
@@ -111,10 +126,10 @@ public class MainServers implements Initializable {
     public void choose_server(MouseEvent mouseEvent){
         try {
             Node node = (Node) mouseEvent.getSource();
-            Card card = serverCardsControllers.get(serverCards.indexOf(node)).getCard();
-            this.mainWrapper.nextScene(new Pages(mainWrapper).loadServerInfo(this,  card), MainWrapper.Direction.Down);
+            ServerData serverData = serverCardsControllers.get(serverCards.indexOf(node)).getServerData();
+            this.mainWrapper.nextScene(new Pages(mainWrapper).loadServerInfo(this, serverData), MainWrapper.Direction.Down);
         } catch (IOException e) {
-            e.printStackTrace();
+            Main.fatalError(mainWrapper, e);
         }
     }
 }

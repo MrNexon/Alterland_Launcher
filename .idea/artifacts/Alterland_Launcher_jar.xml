@@ -11,7 +11,6 @@
       <element id="library" level="project" name="com.google.code.gson:gson:2.8.5" />
       <element id="library" level="project" name="commons-codec:commons-codec:1.11" />
       <element id="library" level="project" name="io.github.typhon0:AnimateFX:1.2.0" />
-      <element id="library" level="project" name="Java Libs" />
     </root>
   </artifact>
 </component>

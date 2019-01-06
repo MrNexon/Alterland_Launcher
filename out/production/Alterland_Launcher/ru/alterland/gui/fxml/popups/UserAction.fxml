@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="popup_container" minHeight="500.0" minWidth="900.0" stylesheets="@../../styles/popups/UserAction.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="popup_container" minHeight="500.0" minWidth="900.0" stylesheets="@../../styles/popups/userAction.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane fx:id="background" prefHeight="150.0" prefWidth="200.0" styleClass="popup-background" />
       <VBox alignment="BOTTOM_CENTER">

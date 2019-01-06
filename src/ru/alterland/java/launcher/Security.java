@@ -1,4 +1,4 @@
-package ru.alterland.java.api.Service;
+package ru.alterland.java.launcher;
 
 public class Security {
    /* private ConnectUtilities connectUtilities;

@@ -2,6 +2,7 @@ package ru.alterland;
 
 import animatefx.animation.FadeIn;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,20 +10,39 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import ru.alterland.controllers.MainWrapper;
+import ru.alterland.controllers.popups.DialogWindow;
 import ru.alterland.java.UserData;
+import ru.alterland.java.values.Popups;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
+import java.util.Timer;
 import java.util.logging.Logger;
 
 public class Main extends Application {
 
-    public static Stage MainStage;
-    public static UserData userData;
+    private static Stage MainStage;
+    private static UserData userData;
+    private static Timer updateServersTimer = new Timer();
     private static Logger log = Logger.getLogger(Main.class.getName());
+
+    public static Stage getMainStage() {
+        return MainStage;
+    }
+
+    public static void setMainStage(Stage mainStage) {
+        MainStage = mainStage;
+    }
+
+    public static UserData getUserData() {
+        return userData;
+    }
+
+    public static void setUserData(UserData userData) {
+        Main.userData = userData;
+    }
+
+    public static Timer getUpdateServersTimer(){
+        return updateServersTimer;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -39,7 +59,7 @@ public class Main extends Application {
         primaryStage.show();
         MainWrapper mainWrapper = fxmlLoader.getController();
         mainWrapper.registerStage(primaryStage);
-        MainStage = primaryStage;
+        setMainStage(primaryStage);
         new FadeIn(root).setSpeed(1.2).play();
         log.info("Showing stage");
     }
@@ -49,8 +69,13 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        /*System.out.println("Download start");
+        Loader.LoadFile("http://api.alterland.ru/mask.png", "H:\\image.png", "0b1b73c0102cc516a418df6dfae5440c");
+        System.out.println("Complete");*/
+        System.getProperties().list(System.out);
         log.info("Launcher Starting");
         launch(args);
+
         /*File folder = new File("K:/RolePlay/libraries/forge");
         String[] files = folder.list((folder1, name) -> name.endsWith(".jar"));
 
@@ -70,9 +95,9 @@ public class Main extends Application {
 
         for ( String fileName : files ) {
             System.out.println("K:/RolePlay/libraries/" + fileName);
-        }
+        }*/
 
-        try {
+       /* try {
             JsonParser parser = new JsonParser();
             JsonElement element = parser.parse(new FileReader("C:/Users/Belyash/Desktop/1.7.10.json"));
             JsonObject obj = element.getAsJsonObject();
@@ -80,22 +105,35 @@ public class Main extends Application {
             Set<Map.Entry<String, JsonElement>> entries = objects.entrySet();
             for (Map.Entry<String, JsonElement> entry: entries) {
                 JsonObject fi = entry.getValue().getAsJsonObject();
-                fi.get
+                System.out.println(fi);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }*/
+
     }
 
-
-    private static void downloadUsingNIO(String urlStr, String file, Long size) throws IOException {
-        URL url = new URL(urlStr);
-        ReadableByteChannel rbc = Channels.newChannel(url.openStream());
-        FileOutputStream fos = new FileOutputStream(file);
-        fos.getChannel().transferFrom(rbc, 0, size);
-        fos.close();
-        rbc.close();
+    public static void fatalError(MainWrapper mainWrapper, Exception e) {
+        Platform.runLater(() -> {
+            updateServersTimer.cancel();
+            Popups dialogWindow = new Popups(mainWrapper);
+            mainWrapper.getDialog_container().getChildren().setAll(dialogWindow.loadDialogWindow("Возникла непредвиденная ошибка", DialogWindow.DialogButtons.Ok));
+            e.printStackTrace();
+            dialogWindow.getDialogWindowController().show(Main::shutdown);
+        });
     }
 
+    public static void fatalError(String text, MainWrapper mainWrapper, Exception e) {
+        Platform.runLater(() -> {
+            updateServersTimer.cancel();
+            Popups dialogWindow = new Popups(mainWrapper);
+            mainWrapper.getDialog_container().getChildren().setAll(dialogWindow.loadDialogWindow(text, DialogWindow.DialogButtons.Ok));
+            e.printStackTrace();
+            dialogWindow.getDialogWindowController().show(Main::shutdown);
+        });
+    }
 
+    public static void shutdown(){
+        System.exit(0);
+    }
 }

@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.java.values.Fragments;
 
@@ -54,7 +55,7 @@ public class ToolBar implements Initializable {
         try {
             nickname_wrapper.getChildren().setAll(new Fragments(mainWrapper).loadToolBarNickname(nickname));
         } catch (IOException e) {
-            e.printStackTrace();
+            Main.fatalError(mainWrapper, e);
         }
     }
 

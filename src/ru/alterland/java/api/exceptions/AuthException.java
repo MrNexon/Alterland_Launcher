@@ -1,4 +1,4 @@
-package ru.alterland.java.api.Exceptions;
+package ru.alterland.java.api.exceptions;
 
 public class AuthException extends ApiExceptions{
     private Type type;
@@ -12,7 +12,7 @@ public class AuthException extends ApiExceptions{
         this.type = type;
     }
 
-    public Type getType(){
+    public Type getAuthType(){
         return this.type;
     }
 

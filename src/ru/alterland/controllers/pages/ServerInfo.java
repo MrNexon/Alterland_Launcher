@@ -8,7 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import ru.alterland.controllers.MainWrapper;
-import ru.alterland.java.Card;
+import ru.alterland.java.ServerData;
+import ru.alterland.java.launcher.MinecraftManager;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,7 +19,7 @@ public class ServerInfo implements Initializable {
 
     private MainWrapper mainWrapper;
     private MainServers mainServers;
-    private Card card;
+    private ServerData serverData;
 
     @FXML
     private StackPane cover_wrapper;
@@ -29,46 +30,43 @@ public class ServerInfo implements Initializable {
     @FXML
     private JFXButton play_button, back_button;
 
-    public ServerInfo(MainWrapper mainWrapper, MainServers mainServers, Card card){
+    public ServerInfo(MainWrapper mainWrapper, MainServers mainServers, ServerData serverData){
         this.mainServers = mainServers;
         this.mainWrapper = mainWrapper;
-        this.card = card;
+        this.serverData = serverData;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ImageView imageView = new ImageView(card.getCover());
-        imageView.setFitWidth(270);
-        imageView.setFitHeight(400);
+        ImageView imageView = new ImageView(serverData.getCover());
+        imageView.setFitWidth(250);
+        imageView.setFitHeight(380);
         cover_wrapper.getChildren().setAll(imageView);
-        title.setText(card.getTitle());
-        description.setText(card.getDescription());
-        switch (card.getArticleStatus()){
-            case Installed:
-                play_button.setText("Играть");
-                break;
+        title.setText(serverData.getTitle());
+        description.setText(serverData.getDescription());
+        switch (serverData.getArticleStatus()){
             case Buy:
                 play_button.setText("Купить");
                 break;
             case Purchase:
-                play_button.setText("Установить");
-                break;
-            case Downloading:
-                play_button.setDisable(true);
-                play_button.setText("Установка...");
+                play_button.setText("Играть");
                 break;
         }
+        if (mainWrapper.getStatus()) {
+            play_button.setText("В игре");
+        }
+        play_button.setDisable(mainWrapper.getStatus());
     }
 
-    public Card getCard() {
-        return card;
+    public ServerData getServerData() {
+        return serverData;
     }
 
-    public void setCard(Card card) {
-        this.card = card;
-    }
     public void play(MouseEvent mouseEvent) {
-        mainWrapper.showProgressBar();
+        play_button.setDisable(true);
+        play_button.setText("В игре");
+        mainWrapper.setProgressBarColor(serverData.getBrandColor());
+        new MinecraftManager(serverData, mainServers.getServerCards(), mainWrapper).startClient();
     }
     public void back(MouseEvent mouseEvent){
         mainWrapper.lastScene(MainWrapper.Direction.Up);

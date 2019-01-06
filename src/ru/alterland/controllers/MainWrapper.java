@@ -8,11 +8,13 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.effect.GaussianBlur;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import ru.alterland.Main;
 import ru.alterland.controllers.fragments.Header;
 import ru.alterland.java.launcher.EffectUtilities;
 import ru.alterland.java.values.Fragments;
@@ -23,47 +25,23 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MainWrapper implements Initializable {
     private static Logger log = Logger.getLogger(MainWrapper.class.getName());
 
     @FXML
-    private StackPane main_container;
-
+    private StackPane main_container, header_wrapper, toolbar_wrapper, wrapper_first, wrapper_second, blockAction_pane, message_pane, dialog_container;
     @FXML
     private BorderPane layout_wrapper;
-
     @FXML
-    private Pane popup_container;
-
+    private Pane popup_container, drag_pane;
     @FXML
-    private StackPane header_wrapper;
-
-    @FXML
-    private StackPane toolbar_wrapper;
-
-    @FXML
-    private StackPane wrapper_first;
-
-    @FXML
-    private StackPane wrapper_second;
-
-    @FXML
-    private Pane drag_pane;
-
-    @FXML
-    private StackPane blockAction_pane;
-
-    @FXML
-    private StackPane message_pane;
-
-    @FXML
-    private Label message_label;
-
+    private Label message_label, progress_label;
     @FXML
     private ProgressBar loading_bar;
+    @FXML
+    private ImageView drag_image;
 
     private Header header_controller;
 
@@ -76,6 +54,7 @@ public class MainWrapper implements Initializable {
 
     private double speed = 2, speedUpDown = 3;
 
+    private Boolean status = false;
 
     public enum Direction {
         Up, Right, Down, Left
@@ -85,6 +64,7 @@ public class MainWrapper implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         log.info("Init");
         loading_bar.setScaleX(0);
+        progress_label.setOpacity(0);
         wrappers = new ArrayList<>();
         screensHistory = new ArrayList<>();
         wrappers.add(wrapper_first);
@@ -95,8 +75,16 @@ public class MainWrapper implements Initializable {
             header_controller = fragments.getHeaderController();
             wrappers.get(0).getChildren().setAll(new Pages(this).loadAuth());
         } catch (IOException e) {
-            log.log(Level.WARNING, "Exception Error:" + e.getMessage());
+            Main.fatalError(this, e);
         }
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status){
+        this.status = status;
     }
 
     public void showToolbar(String nickname) {
@@ -104,7 +92,7 @@ public class MainWrapper implements Initializable {
         try {
             getToolbar_wrapper().getChildren().setAll(new Fragments(this).loadToolBar(this.nickname));
         } catch (IOException e) {
-            e.printStackTrace();
+            Main.fatalError(this, e);
         }
         new SlideInUp(getToolbar_wrapper()).setSpeed(1.5).play();
     }
@@ -134,12 +122,18 @@ public class MainWrapper implements Initializable {
         return wrappers.get(wrapperIndex);
     }
 
+    public StackPane getDialog_container() { return dialog_container; }
+
     public void addWrapperIndex(){
         if (wrapperIndex + 1 >= wrappers.size()){
             wrapperIndex = 0;
         } else {
             wrapperIndex++;
         }
+    }
+
+    public ProgressBar getLoading_bar(){
+        return loading_bar;
     }
 
     public StackPane getToolbar_wrapper() {
@@ -252,6 +246,8 @@ public class MainWrapper implements Initializable {
         log.info("Scene blur");
         GaussianBlur gaussianBlur = new GaussianBlur(0);
         layout_wrapper.setEffect(gaussianBlur);
+        loading_bar.setEffect(gaussianBlur);
+        progress_label.setEffect(gaussianBlur);
         Timeline timeline = new Timeline();
         KeyValue keyValue = new KeyValue(gaussianBlur.radiusProperty(), 10);
         KeyFrame keyFrame = new KeyFrame(Duration.millis(120), keyValue);
@@ -263,6 +259,8 @@ public class MainWrapper implements Initializable {
         log.info("Scene unblur");
         GaussianBlur gaussianBlur = new GaussianBlur(10);
         layout_wrapper.setEffect(gaussianBlur);
+        loading_bar.setEffect(gaussianBlur);
+        progress_label.setEffect(gaussianBlur);
         Timeline timeline = new Timeline();
         KeyValue keyValue = new KeyValue(gaussianBlur.radiusProperty(), 0);
         KeyFrame keyFrame = new KeyFrame(Duration.millis(120), keyValue);
@@ -289,18 +287,37 @@ public class MainWrapper implements Initializable {
     }
 
     public void registerStage(Stage stage) {
-        EffectUtilities.makeDraggable(stage, drag_pane);
+        EffectUtilities.makeDraggable(stage, drag_image);
     }
 
     public void showProgressBar(){
+        setProgressBarValue(ProgressBar.INDETERMINATE_PROGRESS);
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(200), progress_label);
+        fadeTransition.setToValue(0.6);
         ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), loading_bar);
         scaleTransition.setToX(1);
+        fadeTransition.play();
         scaleTransition.play();
     }
 
     public void hideProgressBar(){
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(200), progress_label);
+        fadeTransition.setToValue(0);
         ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), loading_bar);
         scaleTransition.setToX(0);
+        fadeTransition.play();
         scaleTransition.play();
+    }
+
+    public void setProgressBarColor(String color){
+        loading_bar.setStyle("loading-color: " + color);
+    }
+
+    public void setProgressBarValue(double value){
+        loading_bar.setProgress(value);
+    }
+
+    public void setProgressLabelText(String text) {
+        progress_label.setText(text);
     }
 }

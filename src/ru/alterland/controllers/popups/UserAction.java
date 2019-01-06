@@ -10,6 +10,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.fragments.Nickname;
 import ru.alterland.java.values.Fragments;
@@ -67,6 +68,11 @@ public class UserAction extends Popups implements Initializable {
     }
 
     @Override
+    public void show(Runnable runnable) {
+        return;
+    }
+
+    @Override
     public void hide() {
         log.info("Hide");
         FadeTransition fadeTransition1 = new FadeTransition(Duration.millis(120), buttons_list_container);
@@ -96,7 +102,7 @@ public class UserAction extends Popups implements Initializable {
         try {
             nickname_container.getChildren().setAll(nickname_fragment.loadToolBarNickname(this, nickname));
         } catch (IOException e) {
-            e.printStackTrace();
+            Main.fatalError(getMainWrapper(), e);
         }
         more_action_list.setScaleY(0);
         buttons_list_container.setOpacity(0);

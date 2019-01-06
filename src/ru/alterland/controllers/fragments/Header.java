@@ -46,11 +46,11 @@ public class Header implements Initializable {
     }
 
     public void close_application(MouseEvent mouseEvent) {
-        Main.MainStage.close();
+        Main.shutdown();
     }
 
     public void minimize_application(MouseEvent mouseEvent) {
-        Main.MainStage.setIconified(true);
+        Main.getMainStage().setIconified(true);
     }
 
 

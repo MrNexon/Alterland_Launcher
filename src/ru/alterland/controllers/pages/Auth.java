@@ -14,12 +14,16 @@ import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
+import ru.alterland.java.ServerData;
 import ru.alterland.java.UserData;
-import ru.alterland.java.api.Exceptions.AuthException;
+import ru.alterland.java.api.exceptions.ApiExceptions;
+import ru.alterland.java.api.exceptions.AuthException;
+import ru.alterland.java.api.Servers;
 import ru.alterland.java.values.Pages;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -75,39 +79,52 @@ public class Auth implements Initializable {
     }
 
     public void onMouseClicked(MouseEvent mouseEvent) {
+        login_textField.setText("testUser");
+        pass_passField.setText("testUser");
         log.info("Login button clicked");
         if (!login_textField.validate() || !pass_passField.validate()) return;
-        mainWrapper.showMessage("Авторизация");
+        mainWrapper.showMessage("Авторизация...");
         log.info("Auth manager started");
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.submit(() -> {
             try {
                 log.info("Submit data");
                 UserData userData = ru.alterland.java.api.Auth.loginUser(login_textField.getText(), pass_passField.getText());
-                Main.userData = userData;
+                Main.setUserData(userData);
+                Platform.runLater(() -> mainWrapper.showMessage("Загрузка..."));
+                List<ServerData> serverData = Servers.getServerList(userData);
                 Platform.runLater(() -> {
-                    //mainWrapper.showMessage("Загрузка");
                     mainWrapper.showToolbar(userData.getNickname());
                     try {
-                        mainWrapper.nextScene(new Pages(mainWrapper).loadMainServers(), MainWrapper.Direction.Right);
+                        mainWrapper.nextScene(new Pages(mainWrapper).loadMainServers(serverData), MainWrapper.Direction.Right);
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        Main.fatalError(mainWrapper, e);
                     }
                 });
             } catch (AuthException e) {
-                if (e.getType() == AuthException.Type.UserNotFound) {
-                    log.log(Level.WARNING, "User not found");
-                    Platform.runLater(() -> {
-                        error_label.setText("Неверные имя пользователя или пароль");
-                        new FadeIn(error_label).setSpeed(2).play();
-                    });
+                switch (e.getAuthType()) {
+                    case UserNotFound:
+                        log.log(Level.WARNING, "User not found");
+                        Platform.runLater(() -> {
+                            error_label.setText("Неверные имя пользователя или пароль");
+                            new FadeIn(error_label).setSpeed(2).play();
+                        });
+                        break;
+                    case AccessError:
+                        log.log(Level.WARNING, "Access error");
+                        Platform.runLater(() -> {
+                            error_label.setText("Ошибка доступа");
+                            new FadeIn(error_label).setSpeed(2).play();
+                        });
+                        break;
                 }
-                if (e.getType() == AuthException.Type.AccessError) {
-                    log.log(Level.WARNING, "Access error");
-                    Platform.runLater(() -> {
-                        error_label.setText("Ошибка доступа");
-                        new FadeIn(error_label).setSpeed(2).play();
-                    });
+            } catch (ApiExceptions apiExceptions) {
+                switch (apiExceptions.getType()) {
+                    case ConnectionError:
+                        Main.fatalError("Не удается подключиться, проверьте соединение и перезапустите лаунчер", mainWrapper, apiExceptions);
+                        break;
+                    default:
+                        Main.fatalError(mainWrapper, apiExceptions);
                 }
             }
             mainWrapper.hideMessage();

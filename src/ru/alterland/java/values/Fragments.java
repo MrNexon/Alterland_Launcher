@@ -8,7 +8,7 @@ import ru.alterland.controllers.fragments.Nickname;
 import ru.alterland.controllers.fragments.ServerCard;
 import ru.alterland.controllers.fragments.ToolBar;
 import ru.alterland.controllers.popups.UserAction;
-import ru.alterland.java.Card;
+import ru.alterland.java.ServerData;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -58,10 +58,10 @@ public class Fragments {
         return fxmlLoader.load();
     }
 
-    public Node loadServerCard(Card card) throws IOException {
-        log.info("Load apiServer card fragment");
+    public Node loadServerCard(ServerData serverData) throws IOException {
+        log.info("Load apiServer serverData fragment");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ru/alterland/gui/fxml/fragments/ServerCard.fxml"));
-        serverCardController = new ServerCard(card);
+        serverCardController = new ServerCard(serverData);
         fxmlLoader.setController(serverCardController);
         return fxmlLoader.load();
     }

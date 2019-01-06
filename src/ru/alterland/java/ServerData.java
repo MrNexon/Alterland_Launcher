@@ -2,9 +2,10 @@ package ru.alterland.java;
 
 import javafx.scene.image.Image;
 
-public class Card {
+public class ServerData {
     private Image cover;
-    private String id;
+    private String brandColor;
+    private String name;
     private String title;
     private String description;
     private ArticleStatus articleStatus;
@@ -14,8 +15,10 @@ public class Card {
         return cover;
     }
 
-    public String getId() {
-        return id;
+    public String getBrandColor() {return brandColor;}
+
+    public String getName() {
+        return name;
     }
 
     public String getTitle() {
@@ -40,24 +43,26 @@ public class Card {
     }
 
     public enum ArticleStatus {
-        Buy, Purchase, Downloading, Installed
+        Buy, Purchase
     }
 
     public enum ServerStatus {
         Online, Offline, Close, Service, Restart, Unavailable
     }
 
-    public Card(String url, String id, String title, String description, ArticleStatus articleStatus) {
+    public ServerData(String url, String brandColor, String name, String title, String description, ArticleStatus articleStatus) {
         this.cover = new Image(url, 250, 380, false, true, true);
-        this.id = id;
+        this.brandColor = brandColor;
+        this.name = name;
         this.title = title;
         this.description = description;
         this.articleStatus = articleStatus;
     }
 
-    public Card(String url, String id, String title, String description, ArticleStatus articleStatus, ServerStatus serverStatus) {
+    public ServerData(String url, String brandColor, String name, String title, String description, ArticleStatus articleStatus, ServerStatus serverStatus) {
         this.cover = new Image(url, 250, 380, false, true, false);
-        this.id = id;
+        this.brandColor = brandColor;
+        this.name = name;
         this.title = title;
         this.description = description;
         this.articleStatus = articleStatus;

@@ -5,6 +5,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
@@ -14,7 +17,7 @@
     <children>
         <BorderPane fx:id="layout_wrapper" minWidth="-Infinity">
             <top>
-                <StackPane fx:id="header_wrapper" prefHeight="60.0" styleClass="header-wrapper" BorderPane.alignment="CENTER" />
+                <StackPane prefHeight="60.0" styleClass="header-wrapper" BorderPane.alignment="CENTER" />
             </top>
             <center>
             <StackPane BorderPane.alignment="CENTER">
@@ -28,11 +31,16 @@
                 <StackPane fx:id="toolbar_wrapper" prefHeight="80.0" translateY="100.0" BorderPane.alignment="CENTER" />
             </bottom>
         </BorderPane>
-      <TilePane alignment="BOTTOM_CENTER" mouseTransparent="true">
+      <TilePane alignment="BOTTOM_CENTER" mouseTransparent="true" prefColumns="0" prefRows="0">
          <children>
-            <ProgressBar fx:id="loading_bar" prefWidth="908.0" progress="0.81" scaleX="0.0">
+            <Label fx:id="progress_label" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" styleClass="text-color" text="Инициализация..." textAlignment="CENTER" translateY="35.0" TilePane.alignment="CENTER">
                <TilePane.margin>
-                  <Insets bottom="94.0" left="20.0" right="20.0" />
+                  <Insets />
+               </TilePane.margin>
+            </Label>
+            <ProgressBar fx:id="loading_bar" prefHeight="2.0" prefWidth="908.0">
+               <TilePane.margin>
+                  <Insets bottom="90.0" left="20.0" right="20.0" />
                </TilePane.margin>
             </ProgressBar>
          </children>
@@ -41,7 +49,7 @@
          </StackPane.margin>
       </TilePane>
       <StackPane fx:id="popup_container" disable="true" opacity="0" />
-      <StackPane fx:id="blockAction_pane" disable="true" opacity="0" />
+      <StackPane fx:id="dialog_container" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" />
       <StackPane fx:id="message_pane" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" styleClass="message">
          <children>
             <Label fx:id="message_label" text="Загрузка">
@@ -51,11 +59,23 @@
                </styleClass></Label>
          </children>
       </StackPane>
-      <Pane fx:id="drag_pane" prefHeight="30.0">
+      <StackPane fx:id="blockAction_pane" disable="true" opacity="0" />
+      <AnchorPane prefHeight="60.0">
          <StackPane.margin>
-            <Insets bottom="570.0" />
+            <Insets bottom="538.0" />
          </StackPane.margin>
-      </Pane>
+         <children>
+            <StackPane fx:id="header_wrapper" prefHeight="60.0" styleClass="header-wrapper" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane fx:id="drag_pane" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="drag_image" layoutX="150.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/move_bar.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </AnchorPane>
     </children>
    <stylesheets>
       <URL value="@../styles/layout.css" />

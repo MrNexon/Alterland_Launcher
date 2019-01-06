@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.popups.UserAction;
 import ru.alterland.java.values.Popups;
@@ -38,6 +39,7 @@ public class Nickname implements Initializable {
     private Popups userAction;
     private UserAction userActionController;
     private boolean moreExpanded = false;
+    private Node userActionNode;
 
     public Nickname(MainWrapper mainWrapper, String nickname){
         this.mainWrapper = mainWrapper;
@@ -59,9 +61,9 @@ public class Nickname implements Initializable {
         userAction = new Popups(mainWrapper);
         if (is_first){
             try {
-                mainWrapper.getPopup_container().getChildren().setAll(userAction.loadUserAction(nickname, "0"));
+                userActionNode = userAction.loadUserAction(nickname, "0");
             } catch (IOException e) {
-                e.printStackTrace();
+                Main.fatalError(mainWrapper, e);
             }
         }
     }
@@ -69,6 +71,7 @@ public class Nickname implements Initializable {
     public void show_more(MouseEvent mouseEvent) {
         log.info("Showing more");
         if (is_first) {
+            mainWrapper.getPopup_container().getChildren().setAll(userActionNode);
             nickname_container.setOpacity(0);
             userAction.getUserActionController().setOriginalNicknameController(this);
             userAction.getUserActionController().show();

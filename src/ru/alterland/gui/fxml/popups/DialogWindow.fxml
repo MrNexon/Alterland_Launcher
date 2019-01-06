@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="popup_container" minHeight="500.0" minWidth="900.0" stylesheets="@../../styles/popups/dialogWindow.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane fx:id="background" prefHeight="150.0" prefWidth="200.0" styleClass="popup-background" />
+      <TilePane fx:id="dialog_container" alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <StackPane fx:id="dialog_wrapper" maxWidth="400.0" styleClass="popup-wrapper">
+               <children>
+                  <VBox fx:id="dialog_vbox" alignment="CENTER">
+                     <children>
+                        <Label fx:id="dialog_text" alignment="TOP_LEFT" minHeight="35.0" minWidth="315.0" style="-fx-font-size: 18;" text="Вы действительно хотите выйти?" textFill="WHITE" wrapText="true" />
+                        <HBox fx:id="buttons_Box" alignment="CENTER_RIGHT" styleClass="input-blocks">
+                            <children>
+                                <JFXButton fx:id="false_button" alignment="CENTER_RIGHT" defaultButton="true" mnemonicParsing="false" onMouseClicked="#falseButton" text="Отмена" textFill="#008eff">
+                                    <styleClass>
+                                        <String fx:value="primary-text-color" />
+                                        <String fx:value="inputs" />
+                                    </styleClass>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="true_button" defaultButton="true" mnemonicParsing="false" onMouseClicked="#trueButton" text="Да" textFill="#008eff">
+                                    <styleClass>
+                                        <String fx:value="primary-color" />
+                                        <String fx:value="text-color" />
+                                        <String fx:value="inputs" />
+                                    </styleClass>
+                                    <padding>
+                                        <Insets bottom="7.0" left="18.0" right="18.0" top="7.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                            </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="22.0" right="22.0" top="22.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </TilePane>
+   </children>
+</StackPane>

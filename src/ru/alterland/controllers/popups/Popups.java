@@ -1,6 +1,5 @@
 package ru.alterland.controllers.popups;
 
-import javafx.scene.Node;
 import ru.alterland.controllers.MainWrapper;
 
 abstract public class Popups {
@@ -11,6 +10,7 @@ abstract public class Popups {
     }
 
     public abstract void show();
+    public abstract void show(Runnable runnable);
 
     public abstract void hide();
 
