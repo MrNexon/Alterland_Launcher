@@ -10,8 +10,8 @@ import java.net.URL;
 import java.util.logging.Logger;
 
 public class Connection {
-    public static String apiServer = "http://api.alterland.ru/methods/";
-    public static String server = "http://api.alterland.ru/";
+    public static String apiServer = "http://launcher.alterland.ru/methods/";
+    public static String server = "http://launcher.alterland.ru/";
     private static String ver = "0.1";
 
     private static Logger log = Logger.getLogger(Connection.class.getName());

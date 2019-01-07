@@ -6,7 +6,7 @@ Label{
 
 .popup-background{
     -fx-background-color: black;
-    -fx-opacity: 0.5;
+    -fx-opacity: 0;
 }
 
 .popup-list{

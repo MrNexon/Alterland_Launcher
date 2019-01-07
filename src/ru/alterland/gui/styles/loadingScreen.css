@@ -1,0 +1,9 @@
+Label{
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-smoothing-type: gray;
+}
+
+.inputs{
+    -fx-font-family: 'Roboto', sans-serif;
+    -fx-font-size: 16px;
+}

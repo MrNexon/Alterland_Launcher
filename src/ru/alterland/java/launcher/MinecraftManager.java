@@ -1,18 +1,20 @@
 package ru.alterland.java.launcher;
 
 import javafx.application.Platform;
-import org.apache.commons.codec.digest.DigestUtils;
+import javafx.scene.control.ProgressBar;
 import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.fragments.ServerCard;
 import ru.alterland.java.ServerData;
 import ru.alterland.java.api.Client;
+import ru.alterland.java.api.Natives;
 import ru.alterland.java.api.exceptions.ApiExceptions;
 import ru.alterland.java.api.pojo.DownloadFile;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -26,38 +28,68 @@ public class MinecraftManager {
 
     private static Integer loadersCount = 5;
     private Integer averageFileCount = 0;
-    private Integer filesDownloaded = 0;
+    private Integer filesDownloaded = 1;
     private Integer filesCount = 0;
-    private Integer errorIterations = 0;
     private Boolean[] downloadersState = new Boolean[loadersCount];
-    private List<DownloadFile> errorFiles = new ArrayList<>();
+    private Boolean stopLoaders = false;
+    private Boolean stopMinecraft = false;
     private List<Loader> loaders = new ArrayList<>();
     private List<ExecutorService> executorServices = new ArrayList<>();
     private MainWrapper mainWrapper;
     private ServerData serverData;
     private List<ServerCard> serverCards;
     private String clientPath;
+    private String jrePath;
+    private Runnable runnable;
 
     public MinecraftManager(ServerData serverData, List<ServerCard> serverCards, MainWrapper mainWrapper){
         this.serverData = serverData;
         this.serverCards = serverCards;
         this.mainWrapper = mainWrapper;
         clientPath = FilesManager.userFolderPath + FilesManager.clientsFolder + serverData.getName() + FilesManager.fileSeparator;
+        jrePath = FilesManager.userFolderPath + FilesManager.jreFolder;
         for (int i = 0; i < loadersCount; i++){
             downloadersState[i] = false;
         }
     }
 
-    public void startClient(){
-        //connectLibs();
+    public void startClient(Runnable runnable){
+        this.runnable = runnable;
         mainWrapper.showProgressBar();
         mainWrapper.setProgressLabelText("Инициализация...");
-        mainWrapper.setStatus(true);
+        mainWrapper.setLoadingActive(true);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.submit(() -> {
             try {
                 FilesManager.checkClientFolder(serverData);
-                checkClientFiles(Client.getClientFiles(serverData, Main.getUserData()));
+                List<DownloadFile> jreFiles = Natives.getLibFiles(Natives.Lib.jre);
+                Platform.runLater(() -> mainWrapper.setProgressLabelText("Проверка виртуальной машины..."));
+                checkFiles(jreFiles, jrePath, () -> {
+                    ExecutorService executorService1 = Executors.newSingleThreadExecutor();
+                    executorService1.submit(() -> {
+                        Platform.runLater(() -> mainWrapper.setProgressBarValue(ProgressBar.INDETERMINATE_PROGRESS));
+                        Platform.runLater(() -> mainWrapper.setProgressLabelText("Загрузка списка файлов клиента..."));
+                        ExecutorService executorService2 = Executors.newSingleThreadExecutor();
+                        executorService2.submit(() -> {
+                            try {
+                                List<DownloadFile> downloadFiles = Client.getClientFiles(serverData, Main.getUserData());
+                                checkFiles(downloadFiles, clientPath, this::launchMinecraft);
+                            } catch (ApiExceptions apiExceptions) {
+                                System.out.println(apiExceptions.getType());
+                                switch (apiExceptions.getType()){
+                                    case ConnectionError:
+                                        Main.fatalError("Не удается подключиться, проверьте соединение и перезапустите лаунчер", mainWrapper, apiExceptions);
+                                        break;
+                                    case InvalidAccessToken:
+                                        Main.fatalError("Кто то зашел через ваш аккаунт. Попросите его выйти и перезапустите лаунчер", mainWrapper, apiExceptions);
+                                        break;
+                                    default:
+                                        Main.fatalError(mainWrapper, apiExceptions);
+                                }
+                            }
+                        });
+                    });
+                });
             } catch (ApiExceptions apiExceptions) {
                 System.out.println(apiExceptions.getType());
                 switch (apiExceptions.getType()){
@@ -74,14 +106,16 @@ public class MinecraftManager {
         });
     }
 
-    private void fileDownloadComplete(DownloadFile downloadFile){
+    private void fileDownloadComplete(DownloadFile downloadFile, Boolean state){
         filesDownloaded++;
-        mainWrapper.setProgressLabelText("Загрузка файлов: " + filesDownloaded + " из " + filesCount);
+        String action = state ? "Проверка" : "Загрузка";
+        mainWrapper.setProgressLabelText(action + " файлов: " + filesDownloaded + " из " + filesCount);
         Double progress = (filesDownloaded * 0.5) / averageFileCount;
+        progress = (progress > 1) ? 1 : progress;
         mainWrapper.setProgressBarValue(progress);
     }
 
-    private void checkLoadersStatus(Integer id) {
+    private void checkLoadersStatus(Integer id, Runnable runnable) {
         downloadersState[id] = true;
         Integer stopCounts = 0;
         for (Boolean aBoolean : downloadersState) {
@@ -89,30 +123,29 @@ public class MinecraftManager {
         }
 
         if (stopCounts.equals(loadersCount)) {
-            System.out.println(filesDownloaded + " : " + filesCount + " : " + errorFiles.size());
-            if (filesDownloaded.equals(filesCount)) {
+            System.out.println(filesDownloaded + " : " + filesCount);
+            if (filesDownloaded.intValue() == filesCount.intValue()) {
                 checkFilesComplete();
+                if (runnable != null) runnable.run();
             } else {
-                errorFiles.forEach(System.out::println);
-                /*checkClientFiles(errorFiles);
-                if (errorIterations > 2) {
-                    Main.fatalError("Не удалось загрузить файлы, перезапустите лаунчер или повторите попытку позже", mainWrapper, new ApiExceptions("Files download error", ApiExceptions.Type.UnknownError));
-                }
-                errorIterations++;*/
+                Main.fatalError("Не удалось загрузить файлы, перезапустите лаунчер или повторите попытку позже", mainWrapper, new ApiExceptions("Files download error", ApiExceptions.Type.UnknownError));
             }
         }
     }
 
-    private void fileDownloadError(DownloadFile downloadFile){
-        errorFiles.add(downloadFile);
-    }
 
     private void checkFilesComplete() {
         System.out.println("COMPLETE");
-        errorFiles.forEach(System.out::println);
     }
 
-    private void checkClientFiles(List<DownloadFile> downloadFiles){
+    private void checkFiles(List<DownloadFile> downloadFiles, String path, Runnable runnableTask){
+        filesCount = 0;
+        averageFileCount = 0;
+        filesDownloaded = 0;
+        for (int i = 0; i < loadersCount; i++){
+            downloadersState[i] = false;
+        }
+        loaders.clear();
         filesCount = downloadFiles.size();
         averageFileCount = downloadFiles.size() / 2;
         List<List<DownloadFile>> parts = chopped(downloadFiles, loadersCount);
@@ -122,15 +155,17 @@ public class MinecraftManager {
         loaders.forEach(loader -> {
             Runnable runnable = () -> {
                 loader.getDownloadFiles().forEach(downloadFile -> {
+                    if (stopLoaders) return;
                     try {
-                        loader.loadFile(downloadFile, clientPath);
-                        Platform.runLater(() -> fileDownloadComplete(downloadFile));
+                        Boolean state = loader.loadFile(downloadFile, path);
+                        Platform.runLater(() -> fileDownloadComplete(downloadFile, state));
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Platform.runLater(() -> fileDownloadError(downloadFile));
+                        stopLoaders = true;
+                        Main.fatalError("Не удалось загрузить файлы, перезапустите лаунчер или повторите попытку позже. " + downloadFile.getLocalPath(), mainWrapper, new ApiExceptions("Files download error", ApiExceptions.Type.UnknownError));
                     }
                 });
-                checkLoadersStatus(loader.getId());
+                if (!stopLoaders) Platform.runLater(() -> checkLoadersStatus(loader.getId(), runnableTask));
             };
             ExecutorService executorService = Executors.newSingleThreadExecutor();
             executorService.submit(runnable);
@@ -144,17 +179,7 @@ public class MinecraftManager {
         for (int i = 0; i < partsCount; i++){
             parts.add(new ArrayList<>());
         }
-        /*Integer partsSize = list.size() / partsCount;
-        System.out.println(list.size() + " / " + partsCount + " - " + partsSize);
-        parts.get(0).addAll(list.subList(0, partsSize));
-        Integer last = partsSize;
-        for (int i = 1; i < partsCount; i++){
-            Integer start = last + 1;
-            Integer end = last + partsSize > list.size() ? list.size() - 1 : start + partsSize;
-            System.out.println(start + " : " + end);
-            parts.get(i).addAll(list.subList(start, end));
-            last = end;
-        }*/
+
         for (T t : list) {
             parts.get(counter).add(t);
             counter = ((counter + 1) >= loadersCount) ? 0 : counter + 1;
@@ -174,48 +199,100 @@ public class MinecraftManager {
         return paths;
     }
 
-    private void deleteDangerFiles(){
-
+    private static List<Path> getFoldersList(String path) {
+        List<Path> paths = null;
+        try {
+            paths = Files.walk(Paths.get(path))
+                    .filter(Files::isDirectory)
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return paths;
     }
 
     private String connectLibs(){
-        getFilesList(FilesManager.userFolderPath + "/libraries").forEach(file -> {
-            System.out.print(file + ";");
+        final String[] libs = {""};
+        getFilesList(FilesManager.userFolderPath + FilesManager.clientsFolder + serverData.getName() + FilesManager.fileSeparator + FilesManager.librariesFolder).forEach(file -> {
+            libs[0] += file + ";";
         });
-        /*try {
-            Files.walk(Paths.get())
-                    .filter(Files::isRegularFile)
-                    .forEach(System.out::println);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-        return null;
+        return libs[0];
     }
 
-    private List<String> fetchChild(File file, List<String> libs){
-        if (file.isDirectory()){
-            File[] children = file.listFiles();
-            for (File child : children) {
-                libs.addAll(fetchChild(child, libs));
+    private String findNatives() {
+        final String[] nativesPath = new String[1];
+        getFoldersList(FilesManager.userFolderPath + FilesManager.clientsFolder + serverData.getName() + FilesManager.fileSeparator).forEach(folder -> {
+            if (folder.toString().contains("natives")) {
+                nativesPath[0] = folder.toString();
+                return;
             }
-        } else {
-            if (file.getAbsolutePath().endsWith(".jar")){
-                libs.add(file.getAbsolutePath());
+        });
+        return nativesPath[0];
+    }
+
+    private String findClient() {
+        final String[] path = new String[1];
+        getFilesList(FilesManager.userFolderPath + FilesManager.clientsFolder + serverData.getName() + FilesManager.fileSeparator + FilesManager.versionFolder).forEach(file -> {
+            if (file.toString().endsWith(".jar")) {
+                path[0] = file.toString();
+                return;
             }
-        }
-        return libs;
+        });
+        return path[0];
     }
 
-    private void LaunchMinecraft(){
-
+    private void launchMinecraft(){
+        Platform.runLater(() -> mainWrapper.setProgressBarValue(ProgressBar.INDETERMINATE_PROGRESS));
+        Platform.runLater(() -> mainWrapper.setProgressLabelText("Запуск клиента..."));
+        System.out.println(runnable);
+        Platform.runLater(runnable);
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.submit(() -> {
+            String nativesFolder = "-Djava.library.path=\"" + findNatives() + "\"";
+            String cp = " -cp \"" + connectLibs() + findClient() + "\" ";
+            String serverArgs = serverData.getArguments().replace("\"", "");
+            String userDataArgs = " --username " + Main.getUserData().getNickname();
+            userDataArgs += " --version Forge 1.12.2";
+            userDataArgs += " --gameDir " + FilesManager.userFolderPath + FilesManager.clientsFolder + serverData.getName();
+            userDataArgs += " --assetsDir " + FilesManager.userFolderPath + FilesManager.clientsFolder + serverData.getName() + FilesManager.fileSeparator + FilesManager.assetsFolder;
+            userDataArgs += " --assetIndex 1.12";
+            userDataArgs += " --uuid " + Main.getUserData().getUuid();
+            userDataArgs += " --accessToken " + Main.getUserData().getAccessToken();
+            userDataArgs += " --userType mojang";
+            userDataArgs += " --versionType Forge";
+            String command = FilesManager.userFolderPath + FilesManager.jreBinFolder + "java.exe" + " " + nativesFolder + cp + serverArgs + userDataArgs;
+            System.out.println(command);
+            Platform.runLater(Main::hide);
+            try {
+                Process process = Runtime.getRuntime().exec(command);
+                Platform.runLater(() -> mainWrapper.hideProgressBar());
+                InputStream stdout = process.getInputStream();
+                InputStreamReader isrStdout = new InputStreamReader(stdout);
+                BufferedReader brStdout = new BufferedReader(isrStdout);
+                String line = null;
+                while((line = brStdout.readLine()) != null) {
+                    System.out.println(line);
+                    if (stopMinecraft) process.destroy();
+                }
+                int exitVal = process.waitFor();
+                if (exitVal != 0 && stopMinecraft) System.out.println("Process destroyed");
+                else if (exitVal != 0) {
+                    Main.fatalError(mainWrapper, new Exception("Minecraft crash"));
+                    return;
+                }
+                Platform.runLater(Main::show);
+            } catch (IOException | InterruptedException e) {
+                Main.fatalError(mainWrapper, e);
+            }
+        });
     }
 
-    private String MD5File(String path) {
-        try {
-            InputStream inputStream = Files.newInputStream(Paths.get(path));
-            return DigestUtils.md5Hex(inputStream);
-        } catch (IOException e) {
-            return null;
-        }
+    public void cancelLaunching(){
+        stopLoaders = true;
+        stopMinecraft = true;
+        mainWrapper.setLoadingActive(false);
+        executorServices.forEach(executorService -> executorService.shutdown());
+        System.out.println("LOADERS STOP!");
+        mainWrapper.hideProgressBar();
     }
 }

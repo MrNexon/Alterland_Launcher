@@ -10,6 +10,7 @@ public class ServerData {
     private String description;
     private ArticleStatus articleStatus;
     private ServerStatus serverStatus;
+    private String arguments;
 
     public Image getCover() {
         return cover;
@@ -37,6 +38,9 @@ public class ServerData {
         return serverStatus;
     }
 
+    public String getArguments() {
+        return arguments;
+    }
 
     public void setServerStatus(ServerStatus serverStatus) {
         this.serverStatus = serverStatus;
@@ -47,19 +51,20 @@ public class ServerData {
     }
 
     public enum ServerStatus {
-        Online, Offline, Close, Service, Restart, Unavailable
+        Offline, Online, Close, Service, Restart, Unavailable
     }
 
-    public ServerData(String url, String brandColor, String name, String title, String description, ArticleStatus articleStatus) {
+    public ServerData(String url, String brandColor, String name, String title, String description, ArticleStatus articleStatus, String arguments) {
         this.cover = new Image(url, 250, 380, false, true, true);
         this.brandColor = brandColor;
         this.name = name;
         this.title = title;
         this.description = description;
         this.articleStatus = articleStatus;
+        this.arguments = arguments;
     }
 
-    public ServerData(String url, String brandColor, String name, String title, String description, ArticleStatus articleStatus, ServerStatus serverStatus) {
+    public ServerData(String url, String brandColor, String name, String title, String description, ArticleStatus articleStatus, ServerStatus serverStatus, String arguments) {
         this.cover = new Image(url, 250, 380, false, true, false);
         this.brandColor = brandColor;
         this.name = name;
@@ -67,5 +72,6 @@ public class ServerData {
         this.description = description;
         this.articleStatus = articleStatus;
         this.serverStatus = serverStatus;
+        this.arguments = arguments;
     }
 }

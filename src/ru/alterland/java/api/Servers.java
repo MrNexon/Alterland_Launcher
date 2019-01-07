@@ -33,7 +33,7 @@ public class Servers {
         for (int i = 0; i < arr.size(); i++){
             JsonObject server = new Gson().fromJson(arr.get(i), JsonObject.class);
             ServerData serverData;
-            serverData = new ServerData(Connection.server + server.get("cover_src").getAsString(), server.get("brand_color").getAsString(), server.get("server_name").getAsString(), server.get("title").getAsString(), server.get("description").getAsString(), ServerData.ArticleStatus.values()[server.get("article_status").getAsInt()], ServerData.ServerStatus.values()[server.get("status").getAsInt()]);
+            serverData = new ServerData(Connection.server + server.get("cover_src").getAsString(), server.get("brand_color").getAsString(), server.get("server_name").getAsString(), server.get("title").getAsString(), server.get("description").getAsString(), ServerData.ArticleStatus.values()[server.get("article_status").getAsInt()], ServerData.ServerStatus.values()[server.get("status").getAsInt()], server.get("attributes").toString());
             serversData.add(serverData);
             log.info("Load server complete: " + server.get("server_name").getAsString());
         }

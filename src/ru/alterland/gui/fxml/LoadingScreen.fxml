@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.alterland.controllers.LoadingScreen">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bear.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="loading_shadow" style="-fx-font-size: 40;" text="Загрузка библиотек" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <Shadow blurType="GAUSSIAN" color="#000000aa" height="25.0" radius="12.0" width="25.0" />
+         </effect></Label>
+      <Label fx:id="loading_title" layoutX="322.0" layoutY="286.0" style="-fx-font-size: 40;" text="Загрузка библиотек" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton mnemonicParsing="false" onMouseClicked="#exit" text="Отмена" textFill="#070707">
+         <styleClass>
+            <String fx:value="inputs" />
+            <String fx:value="primary-color" />
+            <String fx:value="text-color" />
+         </styleClass>
+         <StackPane.margin>
+            <Insets top="540.0" />
+         </StackPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/loadingScreen.css" />
+      <URL value="@../styles/colors.css" />
+   </stylesheets>
+</StackPane>

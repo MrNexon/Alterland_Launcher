@@ -79,9 +79,11 @@ public class Auth implements Initializable {
     }
 
     public void onMouseClicked(MouseEvent mouseEvent) {
-        login_textField.setText("testUser");
-        pass_passField.setText("testUser");
         log.info("Login button clicked");
+        if (login_textField.getText().equals("") || pass_passField.equals("")) {
+            login_textField.setText("testUser");
+            pass_passField.setText("testUser");
+        }
         if (!login_textField.validate() || !pass_passField.validate()) return;
         mainWrapper.showMessage("Авторизация...");
         log.info("Auth manager started");

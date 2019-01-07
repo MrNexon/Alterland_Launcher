@@ -28,9 +28,8 @@ public class Loader {
         return downloadFiles;
     }
 
-    public void loadFile(DownloadFile downloadFile, String userFolderPath) throws Exception {
-        if (checkFile(userFolderPath + downloadFile.getLocalPath(), downloadFile.getHash())) return;
-        log.info("[LOADER " + id + "] File download start");
+    public Boolean loadFile(DownloadFile downloadFile, String userFolderPath) throws Exception {
+        if (checkFile(userFolderPath + downloadFile.getLocalPath(), downloadFile.getHash())) return true;
         URL link = new URL(Connection.server + downloadFile.getServerPath());
         InputStream in = new BufferedInputStream(link.openStream());
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -46,13 +45,12 @@ public class Loader {
         if (downloadFile.getLocalPath().lastIndexOf(FilesManager.fileSeparator) > -1) {
             String dirPath = userFolderPath + downloadFile.getLocalPath().substring(0, downloadFile.getLocalPath().lastIndexOf(FilesManager.fileSeparator));
             File dir = new File(dirPath);
-            if (!dir.exists()){
-                if (!dir.mkdirs()) throw new Exception("Create dir failed");
-            }
+            if (!dir.exists()) dir.mkdirs();
         }
         FileOutputStream fos = new FileOutputStream(userFolderPath + downloadFile.getLocalPath());
         fos.write(response);
         fos.close();
+        return false;
     }
 
     private Boolean checkFile(String path, String hash){

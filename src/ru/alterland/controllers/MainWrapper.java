@@ -54,7 +54,7 @@ public class MainWrapper implements Initializable {
 
     private double speed = 2, speedUpDown = 3;
 
-    private Boolean status = false;
+    private Boolean loadingActive = false;
 
     public enum Direction {
         Up, Right, Down, Left
@@ -79,12 +79,12 @@ public class MainWrapper implements Initializable {
         }
     }
 
-    public Boolean getStatus() {
-        return status;
+    public Boolean getLoadingActive() {
+        return loadingActive;
     }
 
-    public void setStatus(Boolean status){
-        this.status = status;
+    public void setLoadingActive(Boolean loadingActive){
+        this.loadingActive = loadingActive;
     }
 
     public void showToolbar(String nickname) {

@@ -12,6 +12,8 @@ import javafx.stage.StageStyle;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.popups.DialogWindow;
 import ru.alterland.java.UserData;
+import ru.alterland.java.api.exceptions.ApiExceptions;
+import ru.alterland.java.launcher.FilesManager;
 import ru.alterland.java.values.Popups;
 
 import java.util.Timer;
@@ -23,6 +25,7 @@ public class Main extends Application {
     private static UserData userData;
     private static Timer updateServersTimer = new Timer();
     private static Logger log = Logger.getLogger(Main.class.getName());
+    private static Boolean error = false;
 
     public static Stage getMainStage() {
         return MainStage;
@@ -46,8 +49,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        log.info("Start render scene");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/fxml/MainWrapper.fxml"));
+        log.info("Start render scene");
         Parent root = fxmlLoader.load();
         primaryStage.setTitle("AlterLand | Игровые сервера");
         Scene scene = new Scene(root, 1000, 600);
@@ -62,6 +65,7 @@ public class Main extends Application {
         setMainStage(primaryStage);
         new FadeIn(root).setSpeed(1.2).play();
         log.info("Showing stage");
+
     }
 
     public void init(){
@@ -69,10 +73,20 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        try {
+            FilesManager.checkLauncherFolder();
+        } catch (ApiExceptions apiExceptions) {
+            apiExceptions.printStackTrace();
+            shutdown();
+        }
         /*System.out.println("Download start");
         Loader.LoadFile("http://api.alterland.ru/mask.png", "H:\\image.png", "0b1b73c0102cc516a418df6dfae5440c");
         System.out.println("Complete");*/
-        System.getProperties().list(System.out);
+        /*System.out.println(Settings.get("YYY"));
+        Settings.add("LOLKEK", "testValue");
+        Settings.add("ываыа", "testVцукцукцalue");
+        Settings.save();*/
+        //System.getProperties().list(System.out);
         log.info("Launcher Starting");
         launch(args);
 
@@ -114,7 +128,9 @@ public class Main extends Application {
     }
 
     public static void fatalError(MainWrapper mainWrapper, Exception e) {
+        if (error) return;
         Platform.runLater(() -> {
+            error = true;
             updateServersTimer.cancel();
             Popups dialogWindow = new Popups(mainWrapper);
             mainWrapper.getDialog_container().getChildren().setAll(dialogWindow.loadDialogWindow("Возникла непредвиденная ошибка", DialogWindow.DialogButtons.Ok));
@@ -124,7 +140,9 @@ public class Main extends Application {
     }
 
     public static void fatalError(String text, MainWrapper mainWrapper, Exception e) {
+        if (error) return;
         Platform.runLater(() -> {
+            error = true;
             updateServersTimer.cancel();
             Popups dialogWindow = new Popups(mainWrapper);
             mainWrapper.getDialog_container().getChildren().setAll(dialogWindow.loadDialogWindow(text, DialogWindow.DialogButtons.Ok));
@@ -135,5 +153,13 @@ public class Main extends Application {
 
     public static void shutdown(){
         System.exit(0);
+    }
+
+    public static void hide() {
+        MainStage.setIconified(true);
+    }
+
+    public static void show() {
+        MainStage.setIconified(false);
     }
 }

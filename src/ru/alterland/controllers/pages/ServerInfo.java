@@ -20,6 +20,7 @@ public class ServerInfo implements Initializable {
     private MainWrapper mainWrapper;
     private MainServers mainServers;
     private ServerData serverData;
+    private MinecraftManager minecraftManager;
 
     @FXML
     private StackPane cover_wrapper;
@@ -38,37 +39,67 @@ public class ServerInfo implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println(serverData.getServerStatus());
         ImageView imageView = new ImageView(serverData.getCover());
         imageView.setFitWidth(250);
         imageView.setFitHeight(380);
         cover_wrapper.getChildren().setAll(imageView);
         title.setText(serverData.getTitle());
         description.setText(serverData.getDescription());
-        switch (serverData.getArticleStatus()){
-            case Buy:
-                play_button.setText("Купить");
-                break;
-            case Purchase:
-                play_button.setText("Играть");
-                break;
-        }
-        if (mainWrapper.getStatus()) {
-            play_button.setText("В игре");
-        }
-        play_button.setDisable(mainWrapper.getStatus());
+        buttonsUpdate();
     }
 
     public ServerData getServerData() {
         return serverData;
     }
 
-    public void play(MouseEvent mouseEvent) {
-        play_button.setDisable(true);
+    public void buttonsUpdate() {
+        play_button.setDisable(mainWrapper.getLoadingActive());
+        if (mainWrapper.getLoadingActive()) {
+            play_button.setText("Проверка...");
+            back_button.getStyleClass().remove("primary-text-color");
+            back_button.getStyleClass().add("text-red-color");
+            back_button.setText("Отмена");
+        } else{
+            switch (serverData.getArticleStatus()){
+                case Buy:
+                    play_button.setText("Купить");
+                    break;
+                case Purchase:
+                    play_button.setText("Играть");
+                    break;
+            }
+
+            switch (serverData.getServerStatus()){
+                case Offline:
+                    play_button.setText("Отключен");
+                    play_button.getStyleClass().remove("primary-color");
+                    play_button.getStyleClass().add("red-color");
+                    play_button.setDisable(true);
+                    break;
+            }
+            back_button.getStyleClass().add("primary-text-color");
+            back_button.getStyleClass().remove("text-red-color");
+            back_button.setText("Назад");
+        }
+    }
+
+    public void minecraftLaunch(){
+        back_button.setText("Выйти");
         play_button.setText("В игре");
+    }
+
+    public void play(MouseEvent mouseEvent) {
         mainWrapper.setProgressBarColor(serverData.getBrandColor());
-        new MinecraftManager(serverData, mainServers.getServerCards(), mainWrapper).startClient();
+        minecraftManager = new MinecraftManager(serverData, mainServers.getServerCards(), mainWrapper);
+        minecraftManager.startClient(() -> minecraftLaunch());
+        buttonsUpdate();
     }
     public void back(MouseEvent mouseEvent){
-        mainWrapper.lastScene(MainWrapper.Direction.Up);
+        if (mainWrapper.getLoadingActive()) {
+            minecraftManager.cancelLaunching();
+            minecraftManager = null;
+            buttonsUpdate();
+        } else mainWrapper.lastScene(MainWrapper.Direction.Up);
     }
 }
