@@ -28,6 +28,8 @@ public class Servers {
             JsonObject exJson = obj.getAsJsonObject("exception");
             throw new ApiExceptions(exJson.get("exception_msg").getAsString(), ApiExceptions.Type.values()[exJson.get("exception_code").getAsInt() - 1]);
         }
+        //JsonObject obh = obj.get("response").getAsJsonObject();
+        //System.out.println("TEST: " + obh);
         JsonArray arr = obj.get("response").getAsJsonArray();
         List<ServerData> serversData = new ArrayList<>();
         for (int i = 0; i < arr.size(); i++){

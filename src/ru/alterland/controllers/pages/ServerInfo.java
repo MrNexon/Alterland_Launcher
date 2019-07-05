@@ -39,6 +39,8 @@ public class ServerInfo implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        back_button.setDisableVisualFocus(true);
+        play_button.setDisableVisualFocus(true);
         System.out.println(serverData.getServerStatus());
         ImageView imageView = new ImageView(serverData.getCover());
         imageView.setFitWidth(250);
@@ -54,8 +56,9 @@ public class ServerInfo implements Initializable {
     }
 
     public void buttonsUpdate() {
-        play_button.setDisable(mainWrapper.getLoadingActive());
-        if (mainWrapper.getLoadingActive()) {
+        play_button.setDisable(mainWrapper.getLaunchActionState());
+        if (mainWrapper.getLaunchActionState()) {
+            back_button.setFocusTraversable(false);
             play_button.setText("Проверка...");
             back_button.getStyleClass().remove("primary-text-color");
             back_button.getStyleClass().add("text-red-color");
@@ -78,6 +81,7 @@ public class ServerInfo implements Initializable {
                     play_button.setDisable(true);
                     break;
             }
+
             back_button.getStyleClass().add("primary-text-color");
             back_button.getStyleClass().remove("text-red-color");
             back_button.setText("Назад");
@@ -93,13 +97,18 @@ public class ServerInfo implements Initializable {
         mainWrapper.setProgressBarColor(serverData.getBrandColor());
         minecraftManager = new MinecraftManager(serverData, mainServers.getServerCards(), mainWrapper);
         minecraftManager.startClient(() -> minecraftLaunch());
+        minecraftManager.setMinecraftExitAction(() -> buttonsUpdate());
         buttonsUpdate();
     }
     public void back(MouseEvent mouseEvent){
-        if (mainWrapper.getLoadingActive()) {
-            minecraftManager.cancelLaunching();
-            minecraftManager = null;
+        if (mainWrapper.getLaunchActionState()) {
+            stopLaunching();
             buttonsUpdate();
         } else mainWrapper.lastScene(MainWrapper.Direction.Up);
+    }
+
+    public void stopLaunching() {
+        minecraftManager.cancelLaunching();
+        minecraftManager = null;
     }
 }

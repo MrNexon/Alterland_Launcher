@@ -34,6 +34,7 @@ public class MainServers implements Initializable {
     private Node prevNode;
     private List<Node> serverCards;
     private List<ServerCard> serverCardsControllers;
+    private ServerInfo currentServer;
 
     public MainServers(MainWrapper mainWrapper, List<ServerData> serverData){
         this.mainWrapper = mainWrapper;
@@ -53,6 +54,10 @@ public class MainServers implements Initializable {
         List<ServerData> serversData = new ArrayList<>();
         serverCardsControllers.forEach(serverCard -> serversData.add(serverCard.getServerData()));
         return serversData;
+    }
+
+    public ServerInfo getCurrentServer() {
+        return currentServer;
     }
 
     public void renderCardList(List<ServerData> serversData) {
@@ -127,7 +132,9 @@ public class MainServers implements Initializable {
         try {
             Node node = (Node) mouseEvent.getSource();
             ServerData serverData = serverCardsControllers.get(serverCards.indexOf(node)).getServerData();
-            this.mainWrapper.nextScene(new Pages(mainWrapper).loadServerInfo(this, serverData), MainWrapper.Direction.Down);
+            Pages page = new Pages(mainWrapper);
+            mainWrapper.nextScene(page.loadServerInfo(this, serverData), MainWrapper.Direction.Down);
+            currentServer = page.getServerInfoController();
         } catch (IOException e) {
             Main.fatalError(mainWrapper, e);
         }

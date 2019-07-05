@@ -2,6 +2,7 @@ package ru.alterland.controllers.popups;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -14,6 +15,7 @@ import ru.alterland.Main;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.fragments.Nickname;
 import ru.alterland.java.values.Fragments;
+import ru.alterland.java.values.Pages;
 
 import java.io.IOException;
 import java.net.URL;
@@ -36,6 +38,7 @@ public class UserAction extends Popups implements Initializable {
     private String nickname, uuid;
     private Fragments nickname_fragment;
     private Nickname originalNicknameController;
+    private Runnable runnable;
 
     public UserAction(MainWrapper mainWrapper, String nickname, String uuid) {
         super(mainWrapper);
@@ -84,6 +87,7 @@ public class UserAction extends Popups implements Initializable {
             FadeTransition fadeTransition = new FadeTransition(Duration.millis(120), background);
             fadeTransition.setToValue(0);
             fadeTransition.setOnFinished(e1 -> {
+                if (runnable != null) runnable.run();
                 getMainWrapper().getPopup_container().setDisable(true);
                 getMainWrapper().getPopup_container().setOpacity(0);
                 originalNicknameController.nickname_container.setOpacity(1);
@@ -120,4 +124,20 @@ public class UserAction extends Popups implements Initializable {
         transition.setToValue(0.6);
         transition.play();
     }
+
+    public void exit(MouseEvent mouseEvent) {
+        Main.resetTimer();
+        //getMainWrapper().get
+        runnable = () -> {
+            getMainWrapper().hideToolbar();
+            try {
+                getMainWrapper().nextScene(new Pages(getMainWrapper()).loadAuth(), MainWrapper.Direction.Left);
+            } catch (IOException e) {
+                Platform.runLater(() -> Main.fatalError(getMainWrapper(), e));
+            }
+            //getMainWrapper().clearHistory();
+        };
+        hide();
+    }
+
 }

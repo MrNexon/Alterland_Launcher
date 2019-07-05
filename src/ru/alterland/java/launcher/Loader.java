@@ -29,7 +29,7 @@ public class Loader {
     }
 
     public Boolean loadFile(DownloadFile downloadFile, String userFolderPath) throws Exception {
-        if (checkFile(userFolderPath + downloadFile.getLocalPath(), downloadFile.getHash())) return true;
+        System.out.println(downloadFile.getLocalPath());
         URL link = new URL(Connection.server + downloadFile.getServerPath());
         InputStream in = new BufferedInputStream(link.openStream());
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -53,7 +53,7 @@ public class Loader {
         return false;
     }
 
-    private Boolean checkFile(String path, String hash){
+    public Boolean checkFile(String path, String hash){
         Boolean check = new File(path).exists() && MD5File(path).equals(hash);
         log.info("[LOADER " + id + "] File equals \"" + new File(path).getName() + "\" : " + check);
         return check;

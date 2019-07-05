@@ -40,7 +40,9 @@ public class MinecraftManager {
     private List<ServerCard> serverCards;
     private String clientPath;
     private String jrePath;
+    private String action = "Проверка";
     private Runnable runnable;
+    private Runnable minecraftExitAction;
 
     public MinecraftManager(ServerData serverData, List<ServerCard> serverCards, MainWrapper mainWrapper){
         this.serverData = serverData;
@@ -57,7 +59,7 @@ public class MinecraftManager {
         this.runnable = runnable;
         mainWrapper.showProgressBar();
         mainWrapper.setProgressLabelText("Инициализация...");
-        mainWrapper.setLoadingActive(true);
+        mainWrapper.setLaunchActionState(true);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.submit(() -> {
             try {
@@ -106,13 +108,17 @@ public class MinecraftManager {
         });
     }
 
-    private void fileDownloadComplete(DownloadFile downloadFile, Boolean state){
+    private void fileDownloadComplete(DownloadFile downloadFile){
         filesDownloaded++;
-        String action = state ? "Проверка" : "Загрузка";
-        mainWrapper.setProgressLabelText(action + " файлов: " + filesDownloaded + " из " + filesCount);
         Double progress = (filesDownloaded * 0.5) / averageFileCount;
+        mainWrapper.setProgressLabelText(action + " файлов: " + filesDownloaded + " из " + filesCount);
         progress = (progress > 1) ? 1 : progress;
         mainWrapper.setProgressBarValue(progress);
+    }
+
+    private void fileState(Boolean state) {
+        action = state ? "Проверка" : "Загрузка";
+        mainWrapper.setProgressLabelText(action + " файлов: " + filesDownloaded + " из " + filesCount);
     }
 
     private void checkLoadersStatus(Integer id, Runnable runnable) {
@@ -157,8 +163,12 @@ public class MinecraftManager {
                 loader.getDownloadFiles().forEach(downloadFile -> {
                     if (stopLoaders) return;
                     try {
-                        Boolean state = loader.loadFile(downloadFile, path);
-                        Platform.runLater(() -> fileDownloadComplete(downloadFile, state));
+                        Boolean check = loader.checkFile(path + downloadFile.getLocalPath(), downloadFile.getHash());
+                        Platform.runLater(() -> fileState(check));
+                        if (!check) loader.loadFile(downloadFile, path);
+                        Platform.runLater(() -> fileDownloadComplete(downloadFile));
+                        /*Boolean state = loader.loadFile(downloadFile, path);
+                        Platform.runLater(() -> fileDownloadComplete(downloadFile));*/
                     } catch (Exception e) {
                         e.printStackTrace();
                         stopLoaders = true;
@@ -262,25 +272,28 @@ public class MinecraftManager {
             userDataArgs += " --versionType Forge";
             String command = FilesManager.userFolderPath + FilesManager.jreBinFolder + "java.exe" + " " + nativesFolder + cp + serverArgs + userDataArgs;
             System.out.println(command);
-            Platform.runLater(Main::hide);
             try {
                 Process process = Runtime.getRuntime().exec(command);
                 Platform.runLater(() -> mainWrapper.hideProgressBar());
+                Platform.runLater(Main::hide);
+                InputStream stream = process.getErrorStream();
                 InputStream stdout = process.getInputStream();
+                InputStreamReader errors = new InputStreamReader(stream);
                 InputStreamReader isrStdout = new InputStreamReader(stdout);
                 BufferedReader brStdout = new BufferedReader(isrStdout);
+                BufferedReader errorBuffer = new BufferedReader(errors);
                 String line = null;
-                while((line = brStdout.readLine()) != null) {
+                while((line = brStdout.readLine()) != null || (line = errorBuffer.readLine()) != null) {
                     System.out.println(line);
                     if (stopMinecraft) process.destroy();
                 }
                 int exitVal = process.waitFor();
+                Platform.runLater(Main::show);
                 if (exitVal != 0 && stopMinecraft) System.out.println("Process destroyed");
                 else if (exitVal != 0) {
                     Main.fatalError(mainWrapper, new Exception("Minecraft crash"));
                     return;
-                }
-                Platform.runLater(Main::show);
+                } else minecraftExitEvent();
             } catch (IOException | InterruptedException e) {
                 Main.fatalError(mainWrapper, e);
             }
@@ -290,9 +303,19 @@ public class MinecraftManager {
     public void cancelLaunching(){
         stopLoaders = true;
         stopMinecraft = true;
-        mainWrapper.setLoadingActive(false);
+        mainWrapper.setLaunchActionState(false);
         executorServices.forEach(executorService -> executorService.shutdown());
         System.out.println("LOADERS STOP!");
         mainWrapper.hideProgressBar();
+    }
+
+    public void setMinecraftExitAction(Runnable runnable) {
+        minecraftExitAction = runnable;
+    }
+
+    public void minecraftExitEvent() {
+        mainWrapper.setLaunchActionState(false);
+        System.out.println("Minecraft has been close");
+        if (minecraftExitAction != null) Platform.runLater(minecraftExitAction);
     }
 }

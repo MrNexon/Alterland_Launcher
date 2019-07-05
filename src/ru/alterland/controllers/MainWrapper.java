@@ -54,7 +54,7 @@ public class MainWrapper implements Initializable {
 
     private double speed = 2, speedUpDown = 3;
 
-    private Boolean loadingActive = false;
+    private Boolean launchActionState = false;
 
     public enum Direction {
         Up, Right, Down, Left
@@ -79,12 +79,12 @@ public class MainWrapper implements Initializable {
         }
     }
 
-    public Boolean getLoadingActive() {
-        return loadingActive;
+    public Boolean getLaunchActionState() {
+        return launchActionState;
     }
 
-    public void setLoadingActive(Boolean loadingActive){
-        this.loadingActive = loadingActive;
+    public void setLaunchActionState(Boolean launchActionState){
+        this.launchActionState = launchActionState;
     }
 
     public void showToolbar(String nickname) {
@@ -95,6 +95,12 @@ public class MainWrapper implements Initializable {
             Main.fatalError(this, e);
         }
         new SlideInUp(getToolbar_wrapper()).setSpeed(1.5).play();
+    }
+
+    public void hideToolbar() {
+        SlideOutDown slideOutDown = new SlideOutDown(getToolbar_wrapper());
+        slideOutDown.setSpeed(1.5).getTimeline().setOnFinished((event) -> getToolbar_wrapper().getChildren().clear());
+        slideOutDown.play();
     }
 
     public Header getHeader_controller(){
@@ -189,6 +195,10 @@ public class MainWrapper implements Initializable {
         }
         animation.play();
         nextAnimation.play();
+    }
+
+    public Node getCurrentPage() {
+        return screensHistory.get(screensHistory.size() - 1);
     }
 
     public void lastScene(Direction direction) {

@@ -1,7 +1,7 @@
 package ru.alterland.java.api.exceptions;
 
 public class ApiExceptions extends Exception {
-    public Type type;
+    private Type type;
     public enum Type {
         UnknownError, InternalError, InvalidAccessToken, InvalidClass, InvalidMethod, IncorrectParameters, InvalidFormat, NotFound, ConnectionError
     }

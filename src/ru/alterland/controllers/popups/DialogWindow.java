@@ -163,6 +163,6 @@ public class DialogWindow extends Popups implements Initializable {
                 clickButton = ClickButton.Ok;
         }
         hide();
-        runnable.run();
+        if (runnable != null) runnable.run();
     }
 }

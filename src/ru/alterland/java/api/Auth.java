@@ -26,6 +26,7 @@ public class Auth {
             throw new AuthException(exJson.get("exception_msg").getAsString(), AuthException.Type.values()[exJson.get("exception_code").getAsInt() - 1]);
         }
         JsonObject responseJson = obj.getAsJsonObject("response");
+        //System.out.println(responseJson);
         UserData userData = new UserData(responseJson.get("login").getAsString(), responseJson.get("access_token").getAsString(), UserData.Role.values()[responseJson.get("access_level").getAsInt()], responseJson.get("last_login_timestamp").getAsString(), responseJson.get("user_uuid").getAsString(), Boolean.valueOf(responseJson.get("early_access").getAsString()));
         return userData;
     }

@@ -34,7 +34,7 @@
                                       <Cursor fx:constant="HAND" />
                                   </cursor>
                               </StackPane>
-                              <StackPane fx:id="exit" alignment="TOP_RIGHT" disable="true" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
+                              <StackPane fx:id="exit" alignment="TOP_RIGHT" onMouseClicked="#exit" onMouseEntered="#button_entered" onMouseExited="#button_exited" styleClass="popup-item">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" styleClass="text-color" text="Выход" textFill="WHITE" />
                                  </children>

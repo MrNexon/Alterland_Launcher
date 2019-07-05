@@ -12,10 +12,13 @@ import javafx.stage.StageStyle;
 import ru.alterland.controllers.MainWrapper;
 import ru.alterland.controllers.popups.DialogWindow;
 import ru.alterland.java.UserData;
+import ru.alterland.java.api.Versions;
 import ru.alterland.java.api.exceptions.ApiExceptions;
 import ru.alterland.java.launcher.FilesManager;
 import ru.alterland.java.values.Popups;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Timer;
 import java.util.logging.Logger;
 
@@ -47,6 +50,11 @@ public class Main extends Application {
         return updateServersTimer;
     }
 
+    public static void resetTimer() {
+        updateServersTimer.cancel();
+        updateServersTimer = new Timer();
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/fxml/MainWrapper.fxml"));
@@ -65,7 +73,16 @@ public class Main extends Application {
         setMainStage(primaryStage);
         new FadeIn(root).setSpeed(1.2).play();
         log.info("Showing stage");
-
+        SimpleDateFormat objSDF = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+        if (new Date().compareTo(objSDF.parse("14.03.2019 19:00")) > 0){
+            Main.fatalError("Лаунчер больше не поддерживается и полностью отключен от сервера", mainWrapper, new ApiExceptions("Версия лаунчера устарела"));
+        } else {
+            if (!Versions.checkVersion()) {
+                Main.fatalError("Лаунчер заблокирован. Обвноление будет доступно 14.03.2019 в период с 12:00 до 18:00 по МСК. Настоятельно рекомендуется обновить программу", mainWrapper, new ApiExceptions("Версия лаунчера устарела"));
+            } else {
+                Main.showWarningMessage(mainWrapper);
+            }
+        }
     }
 
     public void init(){
@@ -148,6 +165,14 @@ public class Main extends Application {
             mainWrapper.getDialog_container().getChildren().setAll(dialogWindow.loadDialogWindow(text, DialogWindow.DialogButtons.Ok));
             e.printStackTrace();
             dialogWindow.getDialogWindowController().show(Main::shutdown);
+        });
+    }
+
+    private static void showWarningMessage(MainWrapper mainWrapper) {
+        Platform.runLater(() -> {
+            Popups dialogWindow = new Popups(mainWrapper);
+            mainWrapper.getDialog_container().getChildren().setAll(dialogWindow.loadDialogWindow("Это минорное обновление лаунчера, обновлен только один механизм, который будет использован при глобальном обновлении 14.03.2019\n\nТакже в этой версии есть небольшие GUI обновления\n\nНастоятельно рекомендую обновить лаунчер 14.03.2019 с 12:00 до 18:00 по МСК, поскольку глобальное обновление содержит важные обновления безопасности и стабильности, если лаунчер не будет обновлен, все файлы лаунчера будут удалены, а программа будет самоликвидированна. \n\nЛаунчер будет полностью отключен от сервера 14.03.2019 в 19:00 по МСК", DialogWindow.DialogButtons.Ok));
+            dialogWindow.getDialogWindowController().show();
         });
     }
 

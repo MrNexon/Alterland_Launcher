@@ -38,6 +38,6 @@
    </children>
    <stylesheets>
       <URL value="@../styles/loadingScreen.css" />
-      <URL value="@../styles/colors.css" />
+      <URL value="@../../../../../../AlLauncher/src/gui/styles/colors.css" />
    </stylesheets>
 </StackPane>

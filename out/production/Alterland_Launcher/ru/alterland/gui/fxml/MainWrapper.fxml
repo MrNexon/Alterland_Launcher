@@ -20,65 +20,65 @@
                 <StackPane prefHeight="60.0" styleClass="header-wrapper" BorderPane.alignment="CENTER" />
             </top>
             <center>
-            <StackPane BorderPane.alignment="CENTER">
-               <children>
-                   <StackPane fx:id="wrapper_first" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
-                   <StackPane fx:id="wrapper_second" disable="true" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
-               </children>
-            </StackPane>
+                <StackPane BorderPane.alignment="CENTER">
+                    <children>
+                        <StackPane fx:id="wrapper_first" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
+                        <StackPane fx:id="wrapper_second" disable="true" prefHeight="150.0" prefWidth="200.0" styleClass="wrapper" />
+                    </children>
+                </StackPane>
             </center>
             <bottom>
                 <StackPane fx:id="toolbar_wrapper" prefHeight="80.0" translateY="100.0" BorderPane.alignment="CENTER" />
             </bottom>
         </BorderPane>
-      <TilePane alignment="BOTTOM_CENTER" mouseTransparent="true" prefColumns="0" prefRows="0">
-         <children>
-            <Label fx:id="progress_label" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" styleClass="text-color" text="Инициализация..." textAlignment="CENTER" translateY="35.0" TilePane.alignment="CENTER">
-               <TilePane.margin>
-                  <Insets />
-               </TilePane.margin>
-            </Label>
-            <ProgressBar fx:id="loading_bar" prefHeight="2.0" prefWidth="908.0">
-               <TilePane.margin>
-                  <Insets bottom="90.0" left="20.0" right="20.0" />
-               </TilePane.margin>
-            </ProgressBar>
-         </children>
-         <StackPane.margin>
-            <Insets />
-         </StackPane.margin>
-      </TilePane>
-      <StackPane fx:id="popup_container" disable="true" opacity="0" />
-      <StackPane fx:id="dialog_container" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" />
-      <StackPane fx:id="message_pane" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" styleClass="message">
-         <children>
-            <Label fx:id="message_label" text="Загрузка">
-               <styleClass>
-                  <String fx:value="text-color" />
-                  <String fx:value="message-label" />
-               </styleClass></Label>
-         </children>
-      </StackPane>
-      <StackPane fx:id="blockAction_pane" disable="true" opacity="0" />
-      <AnchorPane prefHeight="60.0">
-         <StackPane.margin>
-            <Insets bottom="538.0" />
-         </StackPane.margin>
-         <children>
-            <StackPane fx:id="header_wrapper" prefHeight="60.0" styleClass="header-wrapper" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Pane fx:id="drag_pane" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ImageView fx:id="drag_image" layoutX="150.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/move_bar.png" />
-                     </image>
-                  </ImageView>
-               </children></Pane>
-         </children>
-      </AnchorPane>
+        <TilePane alignment="BOTTOM_CENTER" mouseTransparent="true" prefColumns="0" prefRows="0">
+            <children>
+                <Label fx:id="progress_label" alignment="CENTER" contentDisplay="CENTER" opacity="0.6" styleClass="text-color" text="Инициализация..." textAlignment="CENTER" translateY="35.0" TilePane.alignment="CENTER">
+                    <TilePane.margin>
+                        <Insets />
+                    </TilePane.margin>
+                </Label>
+                <ProgressBar fx:id="loading_bar" prefHeight="2.0" prefWidth="908.0">
+                    <TilePane.margin>
+                        <Insets bottom="90.0" left="20.0" right="20.0" />
+                    </TilePane.margin>
+                </ProgressBar>
+            </children>
+            <StackPane.margin>
+                <Insets />
+            </StackPane.margin>
+        </TilePane>
+        <StackPane fx:id="popup_container" disable="true" opacity="0" />
+        <StackPane fx:id="dialog_container" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" />
+        <StackPane fx:id="message_pane" disable="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0" styleClass="message">
+            <children>
+                <Label fx:id="message_label" text="Загрузка">
+                    <styleClass>
+                        <String fx:value="text-color" />
+                        <String fx:value="message-label" />
+                    </styleClass></Label>
+            </children>
+        </StackPane>
+        <StackPane fx:id="blockAction_pane" disable="true" opacity="0" />
+        <AnchorPane prefHeight="60.0">
+            <StackPane.margin>
+                <Insets bottom="538.0" />
+            </StackPane.margin>
+            <children>
+                <StackPane fx:id="header_wrapper" prefHeight="60.0" styleClass="header-wrapper" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <Pane fx:id="drag_pane" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fx:id="drag_image" layoutX="150.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/moveBar.png" />
+                            </image>
+                        </ImageView>
+                    </children></Pane>
+            </children>
+        </AnchorPane>
     </children>
-   <stylesheets>
-      <URL value="@../styles/layout.css" />
-      <URL value="@../styles/colors.css" />
-   </stylesheets>
+    <stylesheets>
+        <URL value="@../styles/layout.css" />
+        <URL value="@../styles/colors.css" />
+    </stylesheets>
 </StackPane>

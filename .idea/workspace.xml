@@ -10,28 +10,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/LoadingScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/LoadingScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/alterland/gui/images/bear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/loadingScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/alterland/java/api/Natives.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/alterland/java/launcher/Settings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/alterland/java/api/Versions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/alterland/java/api/pojo/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Alterland_Launcher_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Alterland_Launcher_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/colors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/popups/UserAction.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/popups/UserAction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/MainWrapper.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/MainWrapper.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/popups/UserAction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/fxml/popups/UserAction.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/font-faces.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/fragments/toolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/fragments/toolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/pages/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/pages/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/pages/mainServers.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/pages/mainServers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/pages/serverInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Alterland_Launcher/ru/alterland/gui/styles/pages/serverInfo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/alterland/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/pages/ServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/pages/ServerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/userAction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/userAction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/ServerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/ServerData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/LoadingScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/LoadingScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/images/move_bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/images/moveBar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/font-faces.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/fontFaces.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/mainServers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/mainServers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/serverInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/serverInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/launcher/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/launcher/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/launcher/FilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/launcher/FilesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/ApiExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/ApiExceptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/alterland/java/launcher/MinecraftManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/alterland/java/launcher/MinecraftManager.java" afterDir="false" />
     </list>
@@ -97,31 +106,37 @@
     <session id="-1166675395">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
+          <entry key="project.closed" value="53" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.104" value="1" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.107" value="1" />
           <entry key="project.open.time.108" value="1" />
-          <entry key="project.open.time.111" value="1" />
+          <entry key="project.open.time.111" value="2" />
+          <entry key="project.open.time.113" value="1" />
           <entry key="project.open.time.115" value="1" />
-          <entry key="project.open.time.120" value="1" />
+          <entry key="project.open.time.120" value="2" />
           <entry key="project.open.time.121" value="1" />
           <entry key="project.open.time.122" value="1" />
           <entry key="project.open.time.124" value="1" />
           <entry key="project.open.time.128" value="2" />
-          <entry key="project.open.time.129" value="1" />
+          <entry key="project.open.time.129" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.137" value="3" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.144" value="1" />
+          <entry key="project.open.time.153" value="1" />
+          <entry key="project.open.time.156" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.167" value="1" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.175" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.194" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.45" value="1" />
@@ -129,49 +144,53 @@
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.63" value="3" />
+          <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.66" value="3" />
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.68" value="2" />
           <entry key="project.open.time.69" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.70" value="1" />
-          <entry key="project.open.time.71" value="2" />
+          <entry key="project.open.time.71" value="3" />
           <entry key="project.open.time.72" value="3" />
-          <entry key="project.open.time.74" value="2" />
+          <entry key="project.open.time.74" value="4" />
           <entry key="project.open.time.75" value="3" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.77" value="2" />
           <entry key="project.open.time.78" value="3" />
-          <entry key="project.open.time.79" value="1" />
+          <entry key="project.open.time.79" value="3" />
           <entry key="project.open.time.82" value="2" />
           <entry key="project.open.time.85" value="3" />
           <entry key="project.open.time.86" value="1" />
+          <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.89" value="2" />
-          <entry key="project.open.time.90" value="2" />
+          <entry key="project.open.time.90" value="3" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.open.time.92" value="1" />
+          <entry key="project.open.time.92" value="2" />
           <entry key="project.open.time.94" value="1" />
           <entry key="project.open.time.95" value="1" />
           <entry key="project.open.time.97" value="1" />
           <entry key="project.open.time.98" value="2" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="84" />
+          <entry key="project.opened" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MF" value="2" />
           <entry key="class" value="13" />
-          <entry key="css" value="66" />
-          <entry key="fxml" value="175" />
+          <entry key="css" value="78" />
+          <entry key="fxml" value="177" />
           <entry key="gitignore" value="1" />
           <entry key="groovy" value="2" />
           <entry key="iml" value="3" />
-          <entry key="java" value="300" />
+          <entry key="java" value="323" />
+          <entry key="kt" value="1" />
           <entry key="layout" value="1" />
           <entry key="properties" value="1" />
           <entry key="ttf" value="3" />
@@ -181,35 +200,36 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="13" />
-          <entry key="CSS" value="67" />
+          <entry key="CSS" value="79" />
           <entry key="Font" value="3" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="300" />
+          <entry key="JAVA" value="323" />
+          <entry key="Kotlin" value="1" />
           <entry key="Manifest" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="176" />
+          <entry key="XML" value="178" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="7" />
-          <entry key="css" value="3063" />
+          <entry key="css" value="3071" />
           <entry key="dummy" value="50" />
-          <entry key="fxml" value="623" />
+          <entry key="fxml" value="627" />
           <entry key="gitignore" value="4" />
-          <entry key="java" value="51064" />
+          <entry key="java" value="54776" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="CSS" value="3063" />
-          <entry key="JAVA" value="51064" />
+          <entry key="CSS" value="3071" />
+          <entry key="JAVA" value="54776" />
           <entry key="PLAIN_TEXT" value="54" />
-          <entry key="XML" value="623" />
+          <entry key="XML" value="627" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -223,70 +243,23 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5314499">
+    <splitter split-orientation="horizontal" split-proportion="0.48507464">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/Main.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/pojo/DownloadFile.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2126">
-                  <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1176#1177#0" expanded="true" />
-                    <element signature="e#1217#1218#0" expanded="true" />
-                    <element signature="e#5620#5621#0" expanded="true" />
-                    <element signature="e#5664#5665#0" expanded="true" />
-                    <element signature="e#5706#5707#0" expanded="true" />
-                    <element signature="e#5751#5752#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="177">
-                  <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#668#669#0" expanded="true" />
-                    <element signature="e#714#715#0" expanded="true" />
-                    <element signature="e#1512#1513#0" expanded="true" />
-                    <element signature="e#1543#1544#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/LoadingScreen.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#842#843#0" expanded="true" />
-                    <element signature="e#873#874#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1479">
-                  <caret line="110" column="29" lean-forward="true" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="25" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Connection.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                <state relative-caret-position="272">
+                  <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -295,50 +268,57 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="35" column="435" selection-start-line="35" selection-start-column="435" selection-end-line="35" selection-end-column="435" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="2499">
+                  <caret line="164" column="15" selection-start-line="164" selection-start-column="15" selection-end-line="164" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Settings.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="107">
-                  <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1207">
+                  <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
+                </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="765">
+                  <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/ServerData.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fontFaces.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="636">
-                  <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#839#840#0" expanded="true" />
-                    <element signature="e#871#872#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="323">
+                  <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/ServerInfo.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/EffectUtilities.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="612">
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
                 </state>
               </provider>
             </entry>
@@ -346,8 +326,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="291">
-                  <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+                <state relative-caret-position="272">
+                  <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#706#707#0" expanded="true" />
@@ -362,117 +342,86 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61">
-                  <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1528#1529#0" expanded="true" />
-                    <element signature="e#1574#1575#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1275">
+                  <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2575#2576#0" expanded="true" />
-                    <element signature="e#2611#2612#0" expanded="true" />
-                    <element signature="e#10200#10201#0" expanded="true" />
-                    <element signature="e#10264#10265#0" expanded="true" />
-                    <element signature="e#11246#11247#0" expanded="true" />
-                    <element signature="e#11292#11293#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
-              <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+                <state relative-caret-position="391">
+                  <caret line="31" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Versions.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/mainServers.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="21" selection-start-column="21" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/serverInfo.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="21" selection-start-column="21" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/dialogWindow.css">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/userAction.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/header.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#697#698#0" expanded="true" />
-                    <element signature="e#733#734#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="34">
+                  <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/FilesManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/nickname.css">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css">
+            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="54" column="15" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/ScheduledTasks.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="163">
-                  <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/loadingScreen.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+                <state>
+                  <caret column="21" selection-start-column="21" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -486,6 +435,7 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Kotlin File" />
         <option value="Class" />
       </list>
     </option>
@@ -554,35 +504,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Exceptions/ConnectionException.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Service/Loader.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/Card.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/Auth.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Header.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/Nickname.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ServerCard.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/fragments/ToolBar.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/MainServers.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/ServerInfo.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/api/service/ClientManager.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/api/service/MinecraftManager.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/EffectUtilities.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/dialogWindow.css" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/DialogWindow.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Popups.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Client.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/AuthException.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/ApiExceptions.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/ScheduledTasks.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/api/pojo/DownloadFile.java" />
@@ -590,29 +526,44 @@
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/LoadingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/ru/alterland/controllers/LoadingScreen.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Natives.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/ServerData.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/Main.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/MinecraftManager.java" />
-        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/pages/ServerInfo.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/Settings.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/FilesManager.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/Connection.java" />
         <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/userAction.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/launcher/MinecraftManager.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/pages/ServerInfo.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/pojo/Response.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/ApiExceptions.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Client.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/Auth.fxml" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/auth.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/mainServers.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/serverInfo.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/java/api/Versions.java" />
+        <option value="$PROJECT_DIR$/src/ru/alterland/Main.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="80" />
-    <option name="width" value="1694" />
-    <option name="height" value="952" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -622,174 +573,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="popups" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-              <item name="popups" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="popups" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="launcher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Alterland_Launcher" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="alterland" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alterland_Launcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="true" />
@@ -808,15 +592,15 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546886292176" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550523029388" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Java Libs/fontawesomefx-8.9.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="H:/Работа/Alterland/Моды/forge/build.gradle" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15332031" />
-    <property name="project.structure.side.proportion" value="0.22758621" />
+    <property name="project.structure.side.proportion" value="0.34140715" />
     <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
@@ -824,6 +608,11 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ru.alterland.controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Belyash\IdeaProjects\Alterland_Launcher\src\ru\alterland\gui\fonts" />
+      <recent name="C:\Users\Belyash\IdeaProjects\Alterland_Launcher\src\ru\alterland\gui\images" />
+      <recent name="C:\Users\Belyash\IdeaProjects\Alterland_Launcher\src\ru\alterland\gui\styles" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="groovy.util.GroovyTestCase" />
@@ -948,7 +737,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" auto_hide="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18283582" />
+      <window_info auto_hide="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.19029851" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32995737" />
       <window_info id="Designer" order="3" />
@@ -957,7 +746,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44251627" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44143167" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42299348" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -968,7 +757,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.329718" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.3308026" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.329718" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
@@ -984,6 +773,43 @@
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="11" side_tool="true" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info auto_hide="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.19029851" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" weight="0.32995737" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.44143167" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42299348" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3295964" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3308026" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.329718" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="JetGradle" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="11" side_tool="true" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -1034,216 +860,23 @@
     </ignored-roots>
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/alterland/java/ServerData.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/alterland/java/ServerData.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/scene/EventHandlerProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="6088" column="35" lean-forward="true" selection-start-line="6088" selection-start-column="35" selection-end-line="6088" selection-end-column="35" />
-          <folding>
-            <element signature="e#293446#293447#0" expanded="true" />
-            <element signature="e#293521#293522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/dialogWindow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/DialogWindow.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="12" column="198" selection-start-line="12" selection-start-column="198" selection-end-line="12" selection-end-column="198" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Popups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ToolBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/ServerCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/Popups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="48" lean-forward="true" selection-start-line="124" selection-start-column="48" selection-end-line="124" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/EffectUtilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
-          <folding>
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2336#2337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/java/io/File.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="360" column="20" selection-start-line="360" selection-start-column="20" selection-end-line="360" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/java/nio/file/Files.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="908" column="31" selection-start-line="908" selection-start-column="31" selection-end-line="908" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Nickname.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/ApiExceptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/AuthException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/pojo/DownloadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/Auth.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="25" selection-start-line="116" selection-start-column="18" selection-end-line="146" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/font-faces.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/auth.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/LoadingScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Natives.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="80" lean-forward="true" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,32 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1288,163 +895,151 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/ServerInfo.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="65" column="71" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="71" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/FilesManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="35" column="435" selection-start-line="35" selection-start-column="435" selection-end-line="35" selection-end-column="435" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java">
+    <entry file="file://$PROJECT_DIR$/../AlLauncher/src/gui/styles/colors.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/LoadingScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/ServerData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-          <folding>
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="918">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/ServerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/MinecraftManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="246" column="35" selection-start-line="246" selection-start-column="35" selection-end-line="246" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6335#6336#0" expanded="true" />
-            <element signature="e#6381#6382#0" expanded="true" />
-            <marker date="1546882008969" expanded="true" signature="6881:8286" ph="{...}" />
-          </folding>
+        <state relative-caret-position="1428">
+          <caret line="98" column="26" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/fragments/Header.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#1543#1544#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/LoadingScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2126">
-          <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#5620#5621#0" expanded="true" />
-            <element signature="e#5664#5665#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
-            <element signature="e#5751#5752#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/MinecraftManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
+        <state relative-caret-position="918">
+          <caret line="76" column="70" selection-start-line="76" selection-start-column="70" selection-end-line="76" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
+            <marker date="1546956342973" expanded="true" signature="7601:8133" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/commons-codec-1.11-sources.jar!/org/apache/commons/codec/digest/DigestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Servers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4267">
+          <caret line="286" column="16" selection-start-line="286" selection-start-column="16" selection-end-line="286" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/ServerData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/AuthException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/exceptions/ApiExceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/pojo/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/ScheduledTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="68">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css">
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="54" column="15" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/FilesManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1455,17 +1050,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/MainServers.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/UserData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="110" column="29" lean-forward="true" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Connection.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="102">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1474,32 +1069,160 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/MainWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/pages/Auth.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/auth.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Versions.kt" />
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/pojo/DownloadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/popups/DialogWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="164" column="15" selection-start-line="164" selection-start-column="15" selection-end-line="164" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/MainWrapper.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/layout.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fontFaces.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/colors.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/launcher/EffectUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/values/Pages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2575#2576#0" expanded="true" />
-            <element signature="e#2611#2612#0" expanded="true" />
-            <element signature="e#10200#10201#0" expanded="true" />
-            <element signature="e#10264#10265#0" expanded="true" />
-            <element signature="e#11246#11247#0" expanded="true" />
-            <element signature="e#11292#11293#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/fxml/popups/UserAction.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/controllers/pages/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/mainServers.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/pages/serverInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/dialogWindow.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/popups/userAction.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/nickname.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/gui/styles/fragments/toolbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/java/api/Versions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/alterland/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1518,7 +1241,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.22758621" />
+                <option value="0.34140715" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1531,7 +1254,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.22758621" />
+                <option value="0.34140715" />
               </list>
             </option>
           </splitter-proportions>
@@ -1542,7 +1265,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.22758621" />
+                <option value="0.34140715" />
               </list>
             </option>
           </splitter-proportions>
@@ -1554,7 +1277,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.22758621" />
+                <option value="0.34140715" />
               </list>
             </option>
           </splitter-proportions>
@@ -1566,7 +1289,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.22758621" />
+                <option value="0.34140715" />
                 <option value="0.6" />
               </list>
             </option>
@@ -1575,11 +1298,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jfoenix-8.0.7</last-edited>
+          <last-edited>commons-codec:commons-codec:1.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.22758621" />
+                <option value="0.34140715" />
               </list>
             </option>
           </splitter-proportions>
